@@ -1,0 +1,67 @@
+.contacts-container {
+    min-height: 100vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.people-container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.persons-grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.contact-header-container { 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;    
+    align-items: flex-end;
+}
+.contact-header {
+    height: 100%;
+    font-size: max(3vw, 2.5em);
+    font-family: 'Rockwell';
+    color: #1D1D1D;
+    display: flex;  
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (min-width: 1101px) {
+    .contacts-container {
+        height: 100vh;
+    }
+}
+@media (min-width: 551px) and (max-width: 700px) {
+    .persons-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .contact-header-container {
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 550px) {
+    .persons-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .contact-header-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-header {
+        font-size: max(1.5em, 7vw);
+    }
+}

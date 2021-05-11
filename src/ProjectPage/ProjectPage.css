@@ -1,0 +1,33 @@
+.project-page-container {
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pp-spacer {
+    height: 155px;
+    width: 100%;
+}
+.pp-top-container {
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pp-bottom-container {
+    padding-top: 5%;
+    min-height: 80vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+@media (max-width: 1000px) {
+    .pp-bottom-container {
+        flex-direction: column;
+    }
+}

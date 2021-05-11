@@ -1,0 +1,80 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1D1D1D;
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    z-index: 20;
+}
+.navbar-button-container {
+    width: 33%;
+    padding-right: 6%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-header {
+    height: 100%;
+    padding-left: 6%;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0);
+    color: rgb(255, 139, 6);
+    outline: none;
+    border: none;
+    font-family: 'Rockwell', serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger {
+    background-color:rgb(255, 139, 6, 0);
+    outline: none;
+    border: none;
+    height: 40%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger-icon {
+    color: white;
+}
+.burger-icon:hover {
+    color: rgb(255, 139, 6);
+}
+.scrolled {
+    -webkit-transform: translate3d(0,-200px,0);
+    -moz-transform: translate3d(0,-200px,0);
+    transform: translate3d(0,-200px,0);
+}   
+@media (min-width: 951px) and (max-width: 1050px) {
+    .navbar-button-container {
+        width: 40%;
+    }
+}
+@media (max-width: 950px) {
+    .navbar-button-container {
+        justify-content: flex-end;
+    }
+    .navbar-button-container {
+        justify-content: center;
+    }
+}
+@media (max-width: 1000px) {
+    .navbar-header {
+        font-size: 1.2em;
+    }
+}

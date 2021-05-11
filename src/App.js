@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav/Nav.js'
+import MainPage from './MainPage/MainPage.js'
+import ProjectPage from './ProjectPage/ProjectPage.js'
+import { useInView } from 'react-intersection-observer'
+import { Switch, Route, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { ProjectArray } from './Arrays/Arrays'
+import React from 'react'
 
-function App() {
+function App() { 
+
+
+  //this needs to be placed in a variable since its retuns and cannot be used directly in the .map
+  const projectArray = ProjectArray();
+
+  const loc = useLocation()
+
+  const [ refP, projectsInView ] = useInView();
+  const [ refO, osakkuusInView ] = useInView();
+  const [ refC, contactsInView ] = useInView();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" id="App">
+      <Nav projectsInView={projectsInView} osakkuusInView={osakkuusInView} contactsInView={contactsInView}/>
+      <Switch location={loc} key={loc.pathname}>
+        {projectArray.map((project, index) => {
+          //Makes each project their own page
+          return (
+            <Route path={project.projectPage} key={index}>
+              <ProjectPage arrayObject={project} contactsInView={contactsInView} projectIndex={index}/>
+            </Route>
+          )
+        })}
+        <Route path="/">
+          <MainPage refs={[refP, refO, refC]} contactsInView={contactsInView}/>
+        </Route>
+      </Switch>
     </div>
   );
 }

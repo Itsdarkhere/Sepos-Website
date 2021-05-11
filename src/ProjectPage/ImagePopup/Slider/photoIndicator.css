@@ -1,0 +1,25 @@
+.popup-photo-indicator {
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+}
+.popup-dot-rails {
+    border: 1px solid white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.popup-photo-dot {
+    height: 7px;
+    flex: 1 1 0px;
+}
+.dot-selected {
+    background-color: white;
+}

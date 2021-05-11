@@ -1,0 +1,190 @@
+.company-container {
+    width: 100%;
+    border-radius: 10px;    
+    display: flex;
+    justify-content: center;        
+    align-items: flex-end;
+    box-shadow:  10px 10px 20px #bebebe,
+             -10px -10px 20px #ffffff;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+.company-container:hover {
+    transform: scale(1.05);
+}
+.company-text {
+    position: absolute;
+    --padding: 1.5rem;
+    padding: var(--padding);
+    height: 60%;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    z-index: 2; 
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(255 0% 10% / 0.5) 10%,
+        hsl(0 0% 0% / 1)
+    );
+}
+.company-name-container {
+    width: max-content;
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'Rockwell', serif;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+}
+.company-name-container::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    background: rgba(240, 129, 2, 0.712);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+.company-container:hover .company-name-container::after,
+.company-container:focus-within .company-name-container::after {
+    transform: scaleX(1);
+}
+.company-text-inner {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    text-align: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 1em;
+}
+.company-button-container {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;    
+    align-items: center;
+    z-index: 2;
+    padding-left: 1em;
+}
+.company-button {
+    height: 60%;
+    max-height: 40px;
+    width: 80%;
+    font-size: 1.2em;
+    font-family: 'Tahoma-bold';
+    border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+}
+.company-button:hover {
+    box-shadow: 0px 0px 0px 2px rgba(165, 88, 1, 0.562);
+}
+.company-bg-image {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 5px;
+}
+.company-link {
+    color: white;
+    border-bottom: 2px solid rgba(240, 129, 2, 0.712);
+}
+@media (hover) {
+    .company-text {
+        transform: translateY(65%);
+        transition: transform 500ms ease;
+    }
+    .company-container:hover .company-text,
+    .company-container:focus-within .company-text {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+    .company-container:focus-within .company-text {
+        transition-duration: 0ms;
+    }
+    .company-text > *:not(.company-name-container) {
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+    .company-container:hover .company-text > *:not(.company-name-container),
+    .company-container:focus-within .company-text > *:not(.company-name-container) {
+        opacity: 1;
+        transition-delay: 800ms;
+    }
+    .company-name-container::after {
+        transform: scaleX(0);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms
+        !important;
+        animation-iteration-count: 1
+        !important;
+        transition-duration: 0.01ms
+        !important;
+        scroll-behavior: auto
+        !important;
+    }
+}
+@media (max-width: 600px) {
+    .company-container {
+        width: 95%;
+        height: 95%;
+        box-shadow: none;
+    }
+    .company-text-inner {
+        font-size: max(0.6em, 4vw);
+    }
+    .company-link {
+        font-size: min(1em, 4.5vw);
+    }
+    .company-name-container {
+        font-size: max(1em, 5vw);
+    }
+}
+@media (min-width: 601px) and (max-width: 1300px) {
+    .company-container {
+        width: 95%;
+        height: 95%;
+    }
+    .company-text-inner {
+        font-size: max(0.6em, 1.8vw);
+    }
+    .company-link {
+        font-size: max(.8em, 2vw);
+    }
+    .company-name-container {
+        font-size: max(1em, 2.5vw);
+    }
+}
+@media (min-width: 1301px) {
+    .company-container {
+        width: 95%;
+        height: 100%;
+    }    
+    .company-text-inner {
+        font-size: max(0.9em, 0.9vw);
+    }
+    .company-link {
+        font-size: max(1em, 1vw);
+    }
+    .company-name-container {
+        font-size: max(1.2em, 1.5vw);
+    }
+}
+
+

@@ -1,0 +1,95 @@
+.companies-outer-container {
+    width: 100%;
+    min-height: 1100px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    background-color: white;
+}
+.companies-container {
+    width: 90%; 
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+.companies-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.companies-text-header-container {
+    width: 90%;
+    padding-left: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.companies-text-header {
+    font-family: 'Rockwell', serif;
+    font-size: max(3vw, 2.5em);
+    font-variant: small-caps;
+}
+@media (max-width: 600px) {
+    .companies-text-header {
+        font-size: max(2em, 7vw);
+    }
+    .companies-outer-container {
+        min-height: 1500px;
+    }
+    .companies-container {
+        height: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+    .companies-outer-container {
+        min-height: 1000px;
+        max-height: 1500px;
+    }
+    .companies-container {
+        height: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+    .companies-outer-container {
+        min-height: 1000px;
+        max-height: 1500px;
+    }
+    .companies-container {
+        height: max-content;
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .companies-text-header-container {
+        width: 90%;
+    }
+}
+@media (min-width: 1300px) and (max-width: 1600px) {
+    .companies-outer-container {
+        min-height: 800px;
+    }
+    .companies-container {
+        min-height: 400px;
+        width: 95%;
+    }
+    .companies-text-header-container {
+        width: 95%;
+    }
+}
+@media (min-width: 1601px) {
+    .companies-outer-container {
+        min-height: 800px;
+    }
+    .companies-container {
+        min-height: 500px;
+    }
+}
