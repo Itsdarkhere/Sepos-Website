@@ -8,7 +8,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss'
 SwiperCore.use([Navigation])
 
-export default function ImagePopup({popupOpen, activatePopup, arrayObject, index, setIndex}) {
+export default function ImagePopup({popupOpen, activatePopup, arrayObject, index}) {
 
     //Locks scroll
     const bodyScrollLock = () => {
@@ -53,7 +53,6 @@ export default function ImagePopup({popupOpen, activatePopup, arrayObject, index
                         )
                     })}
                 </Swiper>
-                
             </Modal>
         </div>
     )

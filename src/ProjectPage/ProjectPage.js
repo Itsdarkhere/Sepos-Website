@@ -32,7 +32,7 @@ export default function ProjectPage({ arrayObject, contactsInView, projectIndex 
     return (
         <div className="project-page-container">
             <div className="pp-spacer"></div>
-            <ImagePopup popupOpen={popupOpen} activatePopup={activatePopup} arrayObject={arrayObject} index={index} setIndex={setPictureIndex}/>
+            <ImagePopup popupOpen={popupOpen} activatePopup={activatePopup} arrayObject={arrayObject} index={index} />
             <div className="pp-top-container">
                 <BigImage activatePopup={activatePopup} setIndex={setPictureIndex} projectIndex={projectIndex}/>
                 <Link left={true} link={arrayObject.previousProject}/>

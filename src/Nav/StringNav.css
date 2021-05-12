@@ -66,8 +66,8 @@
 }
 .nav-icon {
     position: absolute;
-    right: -20px;
-    top: 30%;
+    right: 40%;
+    bottom: 15%;
     display: flex;
     justify-content: center;
     align-items: center;

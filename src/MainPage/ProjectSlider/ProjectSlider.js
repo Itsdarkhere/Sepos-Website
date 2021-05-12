@@ -1,12 +1,16 @@
 import './ProjectSlider.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { Link } from 'react-router-dom'
+import SwiperCore, { Navigation } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss'
+import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 import { useAnimation, motion } from 'framer-motion'
 import React from 'react'
+SwiperCore.use([Navigation])
 
 export default function ProjectSlider({ refP, projectArray }) {
 
@@ -25,52 +29,6 @@ export default function ProjectSlider({ refP, projectArray }) {
         })
     }
     
-
-
-    //SWIPER settings
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        variableWidth: false,
-        nextArrow: <div>
-                        <div className="next-slick-arrow" ref={refP}>
-                            <img alt="icon" src={process.env.PUBLIC_URL + './icons/right-chevron.svg'} 
-                            className="next-button"/>
-                        </div>
-                    </div>,
-        prevArrow: <div>
-                        <div className="prev-slick-arrow" ref={refP}>
-                            <img alt="icon" src={process.env.PUBLIC_URL + './icons/right-chevron.svg'} 
-                            className="chevron-left next-button"/>
-                        </div>
-                    </div>,
-        responsive: [
-            {
-                breakpoint: 1700,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                }
-              },
-              {
-                breakpoint: 1200,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-                }
-              },
-              {
-                  breakpoint: 800,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1,
-                  }
-              }
-        ]
-    };
 
     const getArrow = () => {
         if (!swiped) {
@@ -91,22 +49,53 @@ export default function ProjectSlider({ refP, projectArray }) {
                 <p ref={ref}>Kiinteistökehitys</p>
             </motion.div>
             {getArrow()}
-            <Slider {...settings} ref={c => (c)} className="slider" onSwipe={() => setSwiped(true)}>
-                {projectArray.map((project, index) => {
-                    return (
-                        <div className="slider-img-holder" key={index}>
-                            <div className="project-wrapper">
-                                <img loading="lazy" alt="building" src={process.env.PUBLIC_URL + "./pics-highres/" + index + ".png"} className="slider-image"></img>
-                                <Link className="slider-link" to={project.projectPage}></Link>
-                            </div>
-                            <div className="slider-text">
-                                <p className="slider-project-year">{project.finishedIn}</p>
-                                <p className="slider-project-name">{project.name}</p>
-                            </div>
-                         </div>
-                    )
-                })}
-            </Slider>
+            <Swiper
+                spaceBetween={10}
+                slidesPerView={4}
+                loop={true}
+                navigation
+                className="project-swiper"
+                slidesPerGroup="4"
+                speed="1000ms"
+                breakpoints={{
+                    "1300": {
+                      "slidesPerView": 4,
+                      "slidesPerGroup": 4,
+                      "spaceBetween": 10
+                    },
+                    "900": {
+                      "slidesPerView": 3,
+                      "slidesPerGroup": 3,
+                      "spaceBetween": 10
+                    },
+                    "600": {
+                      "slidesPerView": 2,
+                      "slidesPerGroup": 2,
+                      "spaceBetween": 10
+                    },
+                    "000": {
+                        "slidesPerView": 1,
+                        "slidesPerGroup": 1,
+                        "spaceBetween": 10
+                    }
+                }}>
+                    {projectArray.map((project, index) => {
+                        return (
+                            <SwiperSlide className="slider-img-holder" key={index}>
+                                <div className="project-wrapper">
+                                    <img className='slider-image'
+                                    src={process.env.PUBLIC_URL + './pics-highres/' + index + '.png'} 
+                                    alt="project-pic"></img>
+                                    <Link className="slider-link" to={project.projectPage}></Link>
+                                </div>
+                                <div className="slider-text">
+                                    <p className="slider-project-year">{project.finishedIn}</p>
+                                    <p className="slider-project-name">{project.name}</p>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
         </div>
     )
 }
