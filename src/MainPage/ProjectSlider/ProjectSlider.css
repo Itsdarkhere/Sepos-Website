@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
     background-color: white;
+    position: relative;
 }
 .slider-header {
     width: 100%;
@@ -77,6 +77,9 @@
     background-color: rgb(8, 8, 8, 0.5);
     transition: background-color 500ms ease;
 }
+.slider-text {
+    height: 100px;
+}
 .slider-project-name {
     text-align: start;
     font-size: 1.2em;
@@ -87,6 +90,18 @@
     text-align: start;
     color: #FFA700;
     min-height: 25px;
+}
+.chevron-left {
+    transform: rotate(180deg);
+}
+.next-button {
+    height: 100%;
+    width: 100%;
+}
+.next-slick-arrow,
+.prev-slick-arrow {
+    height: 100px;
+    width: 50px;
 }
 .slick-slide > div {
     margin: 0 10px;
@@ -105,10 +120,11 @@
     font-size: 48px;
 }
 .slick-prev {
-    left: -32px !important;
+    left: -52px !important;
     top: 250px !important;
 }
 .slick-next {
+    right: -20px !important;
     top: 250px !important;
 } 
 @media (min-width: 1701px) {
@@ -124,6 +140,14 @@
 @media (min-width: 801px) and (max-width: 1200px) {
     .slider-image {
         width: 100%;
+    }
+    .next-slick-arrow,
+    .prev-slick-arrow {
+        height: 70px;
+        width: 35px;
+    }
+    .slick-prev {
+        left: -37px !important;
     }
 }
 @media (min-width: 651px) and (max-width: 800px) {

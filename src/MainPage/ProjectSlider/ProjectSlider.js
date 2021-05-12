@@ -36,13 +36,15 @@ export default function ProjectSlider({ refP, projectArray }) {
         slidesToScroll: 4,
         variableWidth: false,
         nextArrow: <div>
-                        <div className="next-slick-arrow">
-                        <i className="fa fa-chevron-right hover-color"></i>
+                        <div className="next-slick-arrow" ref={refP}>
+                            <img alt="icon" src={process.env.PUBLIC_URL + './icons/right-chevron.svg'} 
+                            className="next-button"/>
                         </div>
                     </div>,
         prevArrow: <div>
                         <div className="prev-slick-arrow" ref={refP}>
-                            <i className="fa fa-chevron-left hover-color"></i>
+                            <img alt="icon" src={process.env.PUBLIC_URL + './icons/right-chevron.svg'} 
+                            className="chevron-left next-button"/>
                         </div>
                     </div>,
         responsive: [
@@ -85,8 +87,8 @@ export default function ProjectSlider({ refP, projectArray }) {
 
     return (
         <div className="project-slider-container" id="projects">
-            <motion.div ref={ref} animate={controls} className="slider-header">
-                <p>Kiinteistökehitys</p>
+            <motion.div animate={controls} className="slider-header">
+                <p ref={ref}>Kiinteistökehitys</p>
             </motion.div>
             {getArrow()}
             <Slider {...settings} ref={c => (c)} className="slider" onSwipe={() => setSwiped(true)}>
@@ -94,11 +96,13 @@ export default function ProjectSlider({ refP, projectArray }) {
                     return (
                         <div className="slider-img-holder" key={index}>
                             <div className="project-wrapper">
-                                <img loading="lazy" alt={"project" + index} src={process.env.PUBLIC_URL + "./pics-highres/" + index + ".png"} className="slider-image"></img>
+                                <img loading="lazy" alt="building" src={process.env.PUBLIC_URL + "./pics-highres/" + index + ".png"} className="slider-image"></img>
                                 <Link className="slider-link" to={project.projectPage}></Link>
                             </div>
-                            <p className="slider-project-year">{project.finishedIn}</p>
-                            <p className="slider-project-name">{project.name}</p>
+                            <div className="slider-text">
+                                <p className="slider-project-year">{project.finishedIn}</p>
+                                <p className="slider-project-name">{project.name}</p>
+                            </div>
                          </div>
                     )
                 })}

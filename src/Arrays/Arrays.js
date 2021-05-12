@@ -119,29 +119,33 @@ function CompanyArray() {
     const companies = [
         {
             'name': 'Modum Oy',
-            'image': '/company1.png',
+            'image': '/square1.png',
             'website': 'https://modumdigital.com/en/',
+            'displayWebsite': 'modumdigital.fi',
             'description': 'Modum offers a new kind of high-quality professional video and photography production service for product descriptions, presentation and distribution on the web.',
         },
 
         {
             'name': 'CINEMATIC',
-            'image': '/company2.png',
+            'image': '/square2.png',
             'website': 'https://www.cinematic.fi/',
+            'displayWebsite': 'cinematic.fi',
             'description': 'Cinematic is a production company founded in 2018 by Antti J. Jokinen it`s sole purpose is to create movies, TV-series, digital content, music & consumer products.',
         },
 
         {
             'name': 'Hög light and sound',
-            'image': '/company3.png',
+            'image': '/square3.png',
             'website': 'https://www.facebook.com/hoglightandsound/',
+            'displayWebsite': 'hoglightandsound.fi',
             'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum.',
         },
 
         {
             'name': 'Luv Kodit Oy',
-            'image': '/company4.png',
+            'image': '/square4.png',
             'website': 'http://www.luvkoti.fi/',
+            'displayWebsite': 'luvkoti.fi',
             'description': 'LUV on uusi, raikas, yrittäjävetoinen asuntomyyntiyhtiö. Erikoisosaamistamme on paneutuminen kokonaisiin, uusiin kiinteistöhankkeisiin. Ja asiakkaidemme kokonaisvaltaiseen, yksilölliseen palveluun.',
         }
     

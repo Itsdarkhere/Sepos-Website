@@ -37,7 +37,7 @@ export default function ImagePopup({popupOpen, activatePopup, arrayObject, index
                     <i class="fas fa-times fa-2x"></i>
                 </div>
                 <Swiper
-                spaceBetween={50}
+                spaceBetween={100}
                 slidesPerView={1}
                 loop={true}
                 initialSlide={index}

@@ -12,6 +12,7 @@
     width: 33%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .dropdown-menu {
     position: absolute;
@@ -37,7 +38,7 @@
     color: rgb(255, 139, 6);
 }
 .navbar-button {
-    height: 100%;   
+    height: 80%;   
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: 'Rockwell', serif;
@@ -46,9 +47,9 @@
     justify-content: flex-end;
     align-items: center;
     width: 33%;
-}
+}    
 .navbar-button-projects {
-    height: 100%;   
+    height: 80%;   
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: 'Rockwell', serif;
@@ -56,6 +57,21 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+}
+.projects-hashlink-container:focus-within .nav-icon,
+.projects-hashlink-container:hover .nav-icon {
+    transform: rotate(180deg);
+    transition: transform 500ms ease;
+}
+.nav-icon {
+    position: absolute;
+    right: -20px;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
 }
 .navbar-button:hover {
     color: rgb(255, 139, 6);

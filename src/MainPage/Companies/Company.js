@@ -12,11 +12,11 @@ export default function Company({ companyObject }) {
                     <p>{companyObject.name}</p>
                 </div>
                 <div className="company-text-inner">
-                    <p>{companyObject.description}</p>   
+                    <p className="company-desc">{companyObject.description}</p>   
                 </div>
                 <div className="company-button-container">
                     <a className="company-button" href={companyObject.website}>
-                        <p className="company-link">www.modum.fi</p>
+                        <p className="company-link">{companyObject.displayWebsite}</p>
                      </a>
                 </div>
             </div>    

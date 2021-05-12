@@ -4,7 +4,6 @@ import MainPage from './MainPage/MainPage.js'
 import ProjectPage from './ProjectPage/ProjectPage.js'
 import { useInView } from 'react-intersection-observer'
 import { Switch, Route, useLocation } from 'react-router-dom'
-import { useState } from 'react'
 import { ProjectArray } from './Arrays/Arrays'
 import React from 'react'
 

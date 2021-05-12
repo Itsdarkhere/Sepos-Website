@@ -16,7 +16,7 @@ export default function NavPopup({popupOpen, activatePopup}) {
             activatePopup()
         }
     }, [])
-
+    
     const variants = {
         open : {
             opacity: 1,

@@ -27,7 +27,7 @@ export default function Nav({projectsInView, osakkuusInView, contactsInView }) {
         if (width < 950) {
             return (    
                     <button className="hamburger" onClick={() => activatePopup()}>  
-                        <i class="fas fa-bars fa-2x burger-icon"></i>
+                        <i className="fas fa-bars fa-2x burger-icon"></i>
                         <NavPopup popupOpen={popupOpen} activatePopup={activatePopup}/>
                     </button>
                 )

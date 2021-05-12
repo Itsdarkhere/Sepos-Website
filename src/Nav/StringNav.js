@@ -14,7 +14,8 @@ export default function StringNav({projectsInView, osakkuusInView, contactsInVie
         <div className="hashlink-button-container" key="hashcont">
             <div className="projects-hashlink-container">
                 <HashLink smooth to="/#projects" className="navbar-button-projects" style={projectsInView ? {color: 'rgb(255, 139, 6)'} : {}}>
-                    Projektit
+                    <p>Projektit</p>
+                    <i className="fas fa-caret-down nav-icon"></i>
                 </HashLink>
                 <div className="dropdown-menu">
                     {projectArray.map((project, index) => {

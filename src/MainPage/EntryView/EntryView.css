@@ -39,10 +39,10 @@
     text-align: start;
     font-family: 'Rockwell', serif;
 }
-@media (max-width: 650px) {
+@media (min-width: 601px) and (max-width: 650px) {
 
     .line { 
-        font-size: max(2.5vw, .6em);
+        font-size: max(3vw, .6em);
         
     }
     .entry-view-description {
@@ -54,5 +54,12 @@
 @media (max-width: 600px) {
     .entry-view-inner-container {
         justify-content: center;
+    }
+    .line { 
+        font-size: max(3.5vw, .6em);
+        
+    }
+    .entry-view-description {
+        font-size: max(2.5vw, 0.4em);   
     }
 }
