@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 import React from 'react'
 
-export default function Companies({ refO, companyArray }) {
+export default function Companies({ companyArray }) {
 
 
     const [triggered, setTriggered] = useState(true);
@@ -25,12 +25,10 @@ export default function Companies({ refO, companyArray }) {
 
     return (
         <div className="companies-outer-container" id="companies">
-            <div className="companies-text" >
-                <div className="companies-text-header-container">
-                    <motion.p className="companies-text-header" ref={ref} animate={controls}>Osakkuusyhtiöt</motion.p>
-                </div>
+            <div className="companies-text">           
+                <motion.p className="companies-text-header" ref={ref} animate={controls}>Osakkuusyhtiöt</motion.p>
             </div>
-            <div className="companies-container" ref={refO}>
+            <div className="companies-container">
                 {companyArray.map((company, index) => {
                     return (
                         <Company companyObject={company} key={index}/>

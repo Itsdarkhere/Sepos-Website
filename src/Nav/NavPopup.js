@@ -45,7 +45,7 @@ export default function NavPopup({popupOpen, activatePopup}) {
                 <motion.div className="popup-nav-container">
                     <motion.div className="projects-navigation" variants={contentVariants} animate={popupOpen ? 'open' : 'closed'}>
                         <HashLink smooth to="/#companies" className="popup-link" style={{borderBottom: "1px solid rgb(255, 139, 6)"}}>Osakkuusyhtiöt</HashLink>
-                        <HashLink smooth to="/#contact" className="popup-link" style={{borderBottom: "1px solid rgb(255, 139, 6)"}}>Ota Yhteyttä</HashLink>
+                        <HashLink smooth to="/#contact" className="popup-link" style={{borderBottom: "1px solid rgb(255, 139, 6)"}}>Yhteystiedot</HashLink>
                         <HashLink smooth to="/#projects" className="popup-link">Kiinteistökehitys</HashLink>
                         <div className="individual-project-link-container">
                             {projectArray.map((project, index) => {

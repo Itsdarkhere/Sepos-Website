@@ -8,26 +8,26 @@ export default function LandingPage() {
     const { width, ref } = useResizeDetector()
 
 
-    const getVideo = () => {
+    const getPicture = () => {
         if (width < 600) {
-            return ( <video type="video/mp4" src="../video/phone-vid.mp4" className="landing-video" autoPlay={true} loop={true} muted/> )
+            return ( <img src={process.env.PUBLIC_URL + './pics-highres/tall-pic.png'} className="landing-video" alt="wide-project-img"></img> )
         }
-        return ( <video type="video/mp4" src="../video/videoloop.mp4" className="landing-video" autoPlay={true} loop={true} muted/> )
+        return ( <img src={process.env.PUBLIC_URL + './pics-highres/garden-wide-still.jpg'} className="landing-video" alt="wide-project-img"></img> )
     }
 
 
     return (
         <div className="entry-view-outer-container" ref={ref}>
-            {getVideo()}
+            {getPicture()}
             <div className="entry-view-inner-container">
                     <div className="line"> 
                         <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2}}>2.1 MILJARDIN ARVOISET PROJEKTIT</motion.p>
                     </div>
                     <div className="line">
-                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 3}}>355 MILJOONAA EUROA VEROTULOJA</motion.p>
+                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2, delay: 1}}>355 MILJOONAA EUROA VEROTULOJA</motion.p>
                     </div>
                     <div className="line">
-                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 4}}>Rakennusaikana 17 000 työpaikkaa Suomeen</motion.p>
+                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2, delay: 2.5}}>RAKENNUSAIKANA 17 000 TYÖPAIKKAA SUOMEEN</motion.p>
                     </div>
                     <div className="entry-view-description">
                         <p>Sepos Oy on vuonna 2014 perustettu Timo Everin,

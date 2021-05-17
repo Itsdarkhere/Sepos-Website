@@ -5,34 +5,32 @@
     flex-direction: column;
     justify-content: center;    
     align-items: center;
-    background-color: white;
+    background-color: rgb(238, 238, 238);
 }
 .companies-container {
     width: 90%; 
+    min-height: max-content;
     display: grid;  
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr;    
     justify-items: center;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 }
 .companies-text {
-    width: 100%;
+    width: 95%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.companies-text-header-container {
-    width: 90%;
-    padding-left: 2.5%;
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
 }
+
 .companies-text-header {
     font-family: 'Rockwell', serif;
     font-size: max(3vw, 2.5em);
     font-variant: small-caps;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 @media (max-width: 600px) {
     .companies-text-header {
@@ -40,7 +38,7 @@
     }
     .companies-outer-container {
         margin-top: 100px;
-        min-height: 1500px;
+        min-height: max-content;
     }
     .companies-text {
         height: 20%;

@@ -7,7 +7,7 @@ import { ProjectArray, CompanyArray } from '../Arrays/Arrays'
 import React from 'react'
 import Footer from '../Footer/Footer.js'
 
-export default function MainPage({ refs, contactsInView }) {
+export default function MainPage() {
 
     const projectArray = ProjectArray();
     const companyArray = CompanyArray()
@@ -17,10 +17,10 @@ export default function MainPage({ refs, contactsInView }) {
         <div className="main-page-container">
             <div className="entry-spacer"></div>
             <EntryView />
-            <ProjectSlider refP={refs[0]} projectArray={projectArray}/>
-            <Companies refO={refs[1]} companyArray={companyArray}/>
-            <Contacts refC={refs[2]}/>
-            <Footer contactsInView={contactsInView}/>
+            <ProjectSlider projectArray={projectArray}/>
+            <Companies companyArray={companyArray}/>
+            <Contacts/>
+            <Footer/>
         </div>
     )
 }

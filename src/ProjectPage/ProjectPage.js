@@ -7,9 +7,10 @@ import Footer from '../Footer/Footer.js'
 import ImagePopup from './ImagePopup/ImagePopup.js'
 import React, { useEffect, useState } from 'react'
 
-export default function ProjectPage({ arrayObject, contactsInView, projectIndex }) {
+export default function ProjectPage({ arrayObject, projectIndex }) {
 
     const [popupOpen, setPopupOpen] = useState(false);
+    const [imgLoaded, setImgLoaded] = useState(false);
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -31,10 +32,13 @@ export default function ProjectPage({ arrayObject, contactsInView, projectIndex 
 
     return (
         <div className="project-page-container">
+            <div className="loader-container" style={imgLoaded ? {display: 'none'} : {display: 'flex'}}>
+                <div class="loader"></div>
+            </div>
             <div className="pp-spacer"></div>
             <ImagePopup popupOpen={popupOpen} activatePopup={activatePopup} arrayObject={arrayObject} index={index} />
-            <div className="pp-top-container">
-                <BigImage activatePopup={activatePopup} setIndex={setPictureIndex} projectIndex={projectIndex}/>
+            <div className="pp-top-container">  
+                <BigImage activatePopup={activatePopup} setIndex={setPictureIndex} projectIndex={projectIndex} setImgLoaded={setImgLoaded}/>
                 <Link left={true} link={arrayObject.previousProject}/>
                 <Link left={false} link={arrayObject.nextProject}/>
             </div>
@@ -43,7 +47,7 @@ export default function ProjectPage({ arrayObject, contactsInView, projectIndex 
                 <Gallery activatePopup={activatePopup} arrayObject={arrayObject} setIndex={setPictureIndex}/>
             </div>
             <div className="pp-spacer"></div>
-            <Footer contactsInView={contactsInView}/>
+            <Footer/>
         </div>
     )
 }

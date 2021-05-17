@@ -4,7 +4,7 @@ function ProjectArray() {
 
    const projects = [
         {
-           name: 'Garden Arena',
+           name: 'Garden Helsinki',
            pictures: ['/38.png', '/40.png', '/35.png', '/39.png', '/37.png', '/33.png'],
            hqPictures: ['/garden4.jpg', '/garden2.jpg', '/garden11.jpg', '/garden1.jpg', '/garden5.jpeg', '/garden14.jpg'],
            finishedIn: '2022',

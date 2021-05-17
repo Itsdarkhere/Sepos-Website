@@ -12,13 +12,12 @@
 .landing-video {
     width: 100%;
     height: auto;
-    opacity: .7;
-    filter: brightness(90%);
+    opacity: 1;
+    filter: brightness(100%);
 }   
 .entry-view-inner-container {
     position: absolute;
     top: 0;
-    padding-top: 5%;
     height: 70%;
     width: 90%;
     display: flex;
@@ -35,9 +34,11 @@
 }
 .entry-view-description {
     font-size: max(1.5vw, 0.4em);   
-    color: black;
+    color: rgb(219, 219, 219);
     text-align: start;
     font-family: 'Rockwell', serif;
+    text-shadow: 1px 1px 2px #030303;
+    height: max-content;
 }
 @media (min-width: 601px) and (max-width: 650px) {
 

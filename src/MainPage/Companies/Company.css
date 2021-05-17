@@ -42,7 +42,6 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 10px;
-
 }
 .company-name-container::after {
     content: '';
@@ -147,13 +146,21 @@
 @media (max-width: 600px) {
     .company-container {
         width: 95%;
-        height: 95%;
-        box-shadow: none;
         box-shadow:  10px 10px 20px #bebebe,
              -10px -10px 20px #d6d2d2;
+        box-shadow: none;     
+    }
+    .company-text {
+        height: 95%;
+        justify-content: center;
+        bottom: 0;
     }
     .company-text-inner {
         font-size: max(0.6em, 3vw);
+        height: 30%;
+    }
+    .company-button-container {
+        height: 10%;
     }
     .company-link {
         font-size: max(0.7em, 3.2vw);

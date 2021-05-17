@@ -64,15 +64,6 @@
     transform: rotate(180deg);
     transition: transform 500ms ease;
 }
-.nav-icon {
-    position: absolute;
-    right: 40%;
-    bottom: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(0deg);
-}
 .navbar-button:hover {
     color: rgb(255, 139, 6);
 }

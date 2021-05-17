@@ -6,7 +6,7 @@ import NavPopup from './NavPopup.js'
 import { useState } from 'react'
 import React from 'react'
 
-export default function Nav({projectsInView, osakkuusInView, contactsInView }) {
+export default function Nav() {
 
     const { width, ref } = useResizeDetector()
 
@@ -21,6 +21,10 @@ export default function Nav({projectsInView, osakkuusInView, contactsInView }) {
         }
     }
 
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
 
     //Chooses between burger and string menu based on width
     const getNav = () => {
@@ -33,14 +37,14 @@ export default function Nav({projectsInView, osakkuusInView, contactsInView }) {
                 )
         } else {
             return  (  
-                    <StringNav projectsInView={projectsInView} osakkuusInView={osakkuusInView} contactsInView={contactsInView}/>
+                    <StringNav/>
                 )
         }    
     }
 
     return (
         <div className="navbar-container" id="navbar" ref={ref}>
-            <Link className="navbar-header" to="/">Sepos Oy</Link>
+            <Link className="navbar-header" to="/" onClick={() => scrollToTop()}>SEPOS OY</Link>
             <div className="navbar-button-container">
                 {getNav()}
             </div>
