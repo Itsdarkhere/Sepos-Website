@@ -27,7 +27,7 @@
 .navbar-header {
     height: 100%;
     padding-left: 5%;
-    font-size: 2em;
+    font-size: max(1.2em, 2vw);
     background-color: rgba(0,0,0,0);
     color: rgb(255, 139, 6);
     outline: none;

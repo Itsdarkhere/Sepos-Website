@@ -3,16 +3,16 @@ import { motion } from 'framer-motion';
 import { useResizeDetector } from 'react-resize-detector'
 import React from 'react'
 
-export default function LandingPage() {
+export default function LandingPage({ showMainpage }) {
 
     const { width, ref } = useResizeDetector()
 
 
     const getPicture = () => {
         if (width < 600) {
-            return ( <img src={process.env.PUBLIC_URL + './pics-highres/tall-pic.png'} className="landing-video" alt="wide-project-img"></img> )
+            return ( <img src={process.env.PUBLIC_URL + './pics-highres/tall-pic.png'} onLoad={() => showMainpage(true)} className="landing-video" alt="wide-project-img"></img> )
         }
-        return ( <img src={process.env.PUBLIC_URL + './pics-highres/garden-wide-still.jpg'} className="landing-video" alt="wide-project-img"></img> )
+        return ( <img src={process.env.PUBLIC_URL + './pics-highres/garden-wide-still.jpg'} onLoad={() => showMainpage(true)} className="landing-video" alt="wide-project-img"></img> )
     }
 
 

@@ -10,7 +10,6 @@ SwiperCore.use([Navigation])
 
 export default function ImagePopup({popupOpen, activatePopup, arrayObject, index}) {
 
-    const [loaded, setLoaded] = useState(false);
 
     //Locks scroll
     const bodyScrollLock = () => {
@@ -48,11 +47,9 @@ export default function ImagePopup({popupOpen, activatePopup, arrayObject, index
                     {arrayObject.hqPictures.map((src, index) => {
                         return (
                             <SwiperSlide className="modal-slide" key={index}>
-                                <img className='popup-gallery-image' onLoadStart={() => setLoaded(false)}
-                                onLoad={() => setLoaded(true)}
+                                <img className='popup-gallery-image'
                                 src={process.env.PUBLIC_URL + './pics-highres' + src} 
-                                alt="project-pic" style={loaded ? {opacity: 1} : {opacity: 0}}></img>
-                                <div class="img-loader" style={loaded ? {display: 'none'} : {display: 'flex'}}></div>
+                                alt="project-pic"></img>
                             </SwiperSlide>
                         )
                     })}

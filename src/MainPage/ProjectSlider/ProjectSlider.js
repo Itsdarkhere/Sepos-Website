@@ -3,18 +3,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper';
 import 'swiper/swiper.scss';
-
+import 'swiper/components/pagination/pagination.scss';
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 import { useAnimation, motion } from 'framer-motion'
 import React from 'react'
-
+SwiperCore.use([Pagination])
 export default function ProjectSlider({ projectArray }) {
-
-    //changing this removes blinking arrow, only visible anyways under 500px
-    const [swiped, setSwiped] = useState(false);
 
     //these and the if handle on scroll animations
     const {ref, inView } = useInView();
@@ -52,6 +50,7 @@ export default function ProjectSlider({ projectArray }) {
                     className="project-swiper"
                     slidesPerGroup="4"
                     speed="1000ms"
+                    pagination={{clickable: true}}
                     breakpoints={{
                         "1300": {
                         "slidesPerView": 4,

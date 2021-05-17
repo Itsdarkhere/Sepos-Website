@@ -8,12 +8,12 @@
     background-color: rgb(238, 238, 238);
 }
 .loader-container {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 75px;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgb(238, 238, 238);
+    background-color: #1D1D1D;
     z-index: 100;
     display: flex;
     justify-content: center;

@@ -8,9 +8,10 @@
     background-color: rgb(238, 238, 238);
 }
 .companies-container {
-    width: 90%; 
+    width: 92%; 
     min-height: max-content;
     display: grid;  
+    gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;    
     justify-items: center;
@@ -18,7 +19,7 @@
     position: relative;
 }
 .companies-text {
-    width: 95%;
+    width: 92%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -67,12 +68,8 @@
     }
     .companies-container {
         height: max-content;
-        width: 90%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
-    }
-    .companies-text-header-container {
-        width: 90%;
     }
 }
 @media (min-width: 1300px) and (max-width: 1600px) {
@@ -81,10 +78,6 @@
     }
     .companies-container {
         min-height: 400px;
-        width: 95%;
-    }
-    .companies-text-header-container {
-        width: 95%;
     }
 }
 @media (min-width: 1601px) {

@@ -30,7 +30,7 @@ function ProjectArray() {
         },
 
         {
-            name: 'Hippos jyväskylä',
+            name: 'Hippos Jyväskylä',
             pictures: ['/19.png', '/20.png', '/21.png'],
             hqPictures: ['/hippos3.jpg', '/hippos2.jpg', '/hippos1.jpg'],
             finishedIn: '2025',
@@ -45,7 +45,7 @@ function ProjectArray() {
         {
             name: 'Hämeensaari Hämeenlinna',
             pictures: ['/32.png', '/29.png','/30.png', '/28.png', '/31.png'],
-            hqPictures: ['/hämeensaari1.png', '/hämeensaari4.png', '/hämeensaari3.png','/hämeensaari5.png', '/hämeensaari2.png'],
+            hqPictures: ['/hämeensaari1.png', '/hämeensaari4.png', '/hameensaari3.png', '/hameensaari5.png', '/hämeensaari2.png'],
             finishedIn: '2028',
             website: '',
             description: 'Hämeensaari hankkeeseen kuuluu monitoimiareenan, asumista, liiketilaa, toimistoja, liikunta- sekä ravintolatiloja. Yhteensä noin 50 000 kerrosneliötä. Monitoimiareenan osuus koko Hämeensaaren suunnittelualueesta on noin kolmasosa. Hämeensaaressa ajatuksena on yhdistää julkista ja yksityistä tilaa',
