@@ -38,7 +38,7 @@
 .text-fact { 
     color: rgb(119, 84, 43);
     font-size: 1.1em;
-    white-space: nowrap;
+    white-space: wrap;
 }
 .text-button-facts-container {
     width: 100%;

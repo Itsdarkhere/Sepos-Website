@@ -52,7 +52,7 @@
 }
 .popup-gallery-image {
     width: auto;
-    height: 90%;
+    height: 100%;
     max-width: 100%;
 }
 @media (max-width: 450px) {

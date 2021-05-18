@@ -17,22 +17,30 @@
 }   
 .entry-view-inner-container {
     position: absolute;
-    top: 0;
+    top: 50px;
     height: 70%;
     width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 }
 .line { 
-    font-size: max(3vw, .6em);
+    font-size: max(2.5vw, .6em);
+    width: 100%;
     color: white;
     white-space: nowrap;
     font-family: 'Tahoma-bold', serif;
     text-shadow: 2px 2px 10px #000000;
 }
+.price-p {
+    font-size: max(3.5vw, .8em);
+    text-align: center;
+}
 .entry-view-description {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
     font-size: max(1.5vw, 0.4em);   
     color: rgb(219, 219, 219);
     text-align: start;
@@ -57,8 +65,8 @@
         justify-content: center;
     }
     .line { 
-        font-size: max(3.5vw, .6em);
-        
+        font-size: max(2.5vw, .5em);
+            
     }
     .entry-view-description {
         font-size: max(2.5vw, 0.4em);   

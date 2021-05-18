@@ -18,26 +18,20 @@ export default function LandingPage({ showMainpage }) {
 
     return (
         <div className="entry-view-outer-container" ref={ref}>
-            {getPicture()}
+            {getPicture()}  
             <div className="entry-view-inner-container">
                     <div className="line"> 
-                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2}}>2.1 MILJARDIN ARVOISET PROJEKTIT</motion.p>
+                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2}}>Merkittävimmät kohteet Helsingissä, Turussa ja Jyväskylässä,</motion.p>
+                        <motion.p className="price-p" animate={{opacity: [0, 1]}} transition={{duration: 2, delay: 1.5}}>yhteisarvoltaan noin 1.8 mrd €</motion.p>
                     </div>
-                    <div className="line">
-                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2, delay: 1}}>355 MILJOONAA EUROA VEROTULOJA</motion.p>
-                    </div>
-                    <div className="line">
-                        <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2, delay: 2.5}}>RAKENNUSAIKANA 17 000 TYÖPAIKKAA SUOMEEN</motion.p>
-                    </div>
-                    <div className="entry-view-description">
-                        <p>Sepos Oy on vuonna 2014 perustettu Timo Everin,
-                            Ilkka Kilpimaan ja Taaleri Sijoitus Oy:n omistama 
-                            yritys, jonka toimialana on kiinteistökehitys ja 
-                            sijoittaminen aktiivisen elämäntavan arvoketjussa 
-                            toimiviin yrityksiin
-                        </p>
-                    </div>
-                </div>
+            </div>
+            <div className="entry-view-description">
+                <p>Sepos Oy on vuonna 2014 perustettu Timo Everin, 
+                    Ilkka Kilpimaan ja Taaleri Sijoitus Oy:n omistama yritys, 
+                    jonka toimialana on kiinteistökehitys ja sijoittaminen aktiivisen elämäntavan 
+                    arvoketjussa toimiviin yrityksiin.
+                </p>
+            </div>
         </div>
     )   
 }

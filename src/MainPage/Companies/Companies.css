@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;    
     align-items: center;
-    background-color: rgb(238, 238, 238);
+    background-color: #1D1D1D;
 }
 .companies-container {
     width: 92%; 
@@ -32,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    color: white;
 }
 @media (max-width: 600px) {
     .companies-text-header {

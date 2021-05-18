@@ -4,15 +4,12 @@
     display: flex;
     justify-content: center;        
     align-items: flex-end;
-    box-shadow:  10px 10px 20px #bebebe,
-             -10px -10px 20px #ffffff;
+    box-shadow:  5px 5px 10px #141414,
+             -5px -5px 10px #000000;
     position: relative;
     border-radius: 0.5rem;
     transition: transform 500ms ease;
     overflow: hidden;
-}
-.company-container:hover {
-    transform: scale(1.05);
 }
 .company-text {
     position: absolute;
@@ -53,10 +50,6 @@
     background: rgba(240, 129, 2, 0.712);
     transform-origin: left;
     transition: transform 500ms ease;
-}
-.company-container:hover .company-name-container::after,
-.company-container:focus-within .company-name-container::after {
-    transform: scaleX(1);
 }
 .company-text-inner {
     width: 90%;
@@ -129,6 +122,13 @@
     }
     .company-name-container::after {
         transform: scaleX(0);
+    }
+    .company-container:hover {
+        transform: scale(1.05);
+    }
+    .company-container:hover .company-name-container::after,
+    .company-container:focus-within .company-name-container::after {
+        transform: scaleX(1);
     }
 }
 @media (prefers-reduced-motion: reduce) {

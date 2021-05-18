@@ -26,10 +26,11 @@ export default function Text({ arrayObject }) {
                         {getButton()}
                     </div>
                     <div className="text-facts">
-                        <li className="text-fact">Vuosittain verotuloa 17 Miljoonaa</li>
-                        <li className="text-fact">Rakennuksen aikana 8 000 uutta työpaikkaa</li>
-                        <li className="text-fact">Hanke yhdistää rata-alueen erottamia alueita.</li>
-                        <li className="text-fact">Toiminnan aikana yhteensä 222 miljoonaa euroa verotuloa</li>
+                        {arrayObject.facts.map((fact, index) => {
+                            return (
+                                <li key={index} className="text-fact">{fact}</li>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

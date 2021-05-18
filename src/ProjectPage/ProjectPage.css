@@ -61,7 +61,6 @@ loader:before {
       top:1vmin;
       width:6vmin;
 }
-
   
 @keyframes spin {
     100% {
@@ -70,7 +69,15 @@ loader:before {
 }
 .pp-spacer {
     height: 155px;
-    width: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.status-p {
+    font-size: max(1.5vw, 0.8em);
+    font-weight: lighter;
+    
 }
 .pp-top-container {
     height: auto;

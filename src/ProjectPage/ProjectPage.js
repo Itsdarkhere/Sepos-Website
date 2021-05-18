@@ -13,6 +13,8 @@ export default function ProjectPage({ arrayObject, projectIndex }) {
     const [imgLoaded, setImgLoaded] = useState(false);
     const [index, setIndex] = useState(0);
 
+
+    //Scrolls to start on mount
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -46,8 +48,10 @@ export default function ProjectPage({ arrayObject, projectIndex }) {
                 <Text arrayObject={arrayObject}/>
                 <Gallery activatePopup={activatePopup} arrayObject={arrayObject} setIndex={setPictureIndex}/>
             </div>
-            <div className="pp-spacer"></div>
-            <Footer/>
+            <div className="pp-spacer">
+                <p className="status-p">{arrayObject.status ? 'Tilanne: ' + arrayObject.status : ''}</p>
+            </div>
+            <Footer/>   
         </div>
     )
 }
