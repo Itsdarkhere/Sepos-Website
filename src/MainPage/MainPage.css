@@ -5,8 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-behavior: smooth;
-    background-color: rgb(238, 238, 238);
+    background-color: #E5E5E5;
 }
 .entry-spacer {
     height: 75px;
@@ -26,12 +25,12 @@
     align-items: center;
 }
 .main-loader {
-    animation:spin 1s infinite linear;
-    border:solid 1vmin transparent;
+    animation: spin 1s infinite linear;
+    border: solid 1vmin transparent;
     border-radius:50%;
     border-right-color:rgb(255, 139, 6);
     border-top-color:rgb(230, 170, 59);
-    box-sizing:border-box;
+    box-sizing: border-box;
     height:10vmin;
     left:calc(50% - 5vmin);
     position:fixed;

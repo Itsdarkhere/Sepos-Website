@@ -5,11 +5,12 @@ import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper';
 import 'swiper/swiper.scss';
-import 'swiper/components/pagination/pagination.scss';
-import { Link } from 'react-router-dom'
+import 'swiper/components/pagination/pagination.min.css';
+import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 import { useAnimation, motion } from 'framer-motion'
+import {GrNext, GrPrevious} from 'react-icons/gr'
 import React from 'react'
 SwiperCore.use([Pagination])
 export default function ProjectSlider({ projectArray }) {
@@ -31,18 +32,22 @@ export default function ProjectSlider({ projectArray }) {
         <div className="project-slider-outer-container">
             <div className="project-slider-container" id="projects">
                 <motion.div animate={controls} className="slider-header">
-                    <p ref={ref}>Kiinteistökehitys</p>
+                    <div className="slider-header-inner" ref={ref}>
+                        Kiinteistökehitys
+                    </div>
                 </motion.div>
-                <div className="swiper-button-left color-target">
-                    <i class="fas fa-chevron-left fa-2x"></i>
+                <div className="swiper-button-left scale-button">
+                    <GrPrevious/>
                 </div>
-                <div className="swiper-button-right color-target">
-                    <i class="fas fa-chevron-right fa-2x"></i>
+                <div className="swiper-button-right scale-button">
+                    <GrNext/>
                 </div>
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={4}
+                    direction={'horizontal'}
                     loop={true}
+                    slidesPerColumnFill={1}
                     navigation={{
                         nextEl: '.swiper-button-right',
                         prevEl: '.swiper-button-left',
@@ -75,7 +80,7 @@ export default function ProjectSlider({ projectArray }) {
                     }}>
                         {projectArray.map((project, index) => {
                             return (
-                                <SwiperSlide className="slider-img-holder" key={index}>
+                                <SwiperSlide className="swiper-slide" key={index}>
                                     <div className="project-wrapper">
                                         <img className='slider-image'
                                         src={process.env.PUBLIC_URL + './pics-highres/' + index + '.png'} 
@@ -85,6 +90,7 @@ export default function ProjectSlider({ projectArray }) {
                                     <div className="slider-text">
                                         <p className="slider-project-name">{project.name}</p>
                                     </div>
+                                    <div className="spacer"></div>
                                 </SwiperSlide>
                             )
                         })}

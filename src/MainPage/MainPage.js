@@ -22,7 +22,7 @@ export default function MainPage() {
     return (
         <div className="main-page-container">
             <div className="main-loader-container" style={loaded ? {display: 'none'} : {display: 'flex'}}>
-                <div class="main-loader"></div>
+                <div className="main-loader"></div>
             </div>    
             <div className="entry-spacer"></div>
             <EntryView showMainpage={showMainpage}/>

@@ -44,8 +44,6 @@ export default function NavPopup({popupOpen, activatePopup}) {
         <motion.div className="overlay" initial='closed' variants={variants} animate={popupOpen ? 'open' : 'closed'} transition={{duration: 1}}>
                 <motion.div className="popup-nav-container">
                     <motion.div className="projects-navigation" variants={contentVariants} animate={popupOpen ? 'open' : 'closed'}>
-                        <HashLink smooth to="/#companies" className="popup-link">Osakkuusyhtiöt</HashLink>
-                        <HashLink smooth to="/#contact" className="popup-link">Yhteystiedot</HashLink>
                         <HashLink smooth to="/#projects" className="popup-link">Kiinteistökehitys</HashLink>
                         <div className="individual-project-link-container">
                             {projectArray.map((project, index) => {
@@ -54,6 +52,9 @@ export default function NavPopup({popupOpen, activatePopup}) {
                                 )
                             })}
                         </div>
+                        <div className="popup-spacer"></div>
+                        <HashLink smooth to="/#companies" className="popup-link">Osakkuusyhtiöt</HashLink>
+                        <HashLink smooth to="/#contact" className="popup-link">Yhteystiedot</HashLink>
                 </motion.div>
             </motion.div>
         </motion.div>

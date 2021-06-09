@@ -21,7 +21,7 @@ export default function Person({image, name, title, phone, email}) {
         <motion.div className="person-container" ref={ref} animate={controls}>
             <div className="person-inner-container">
                 <div className="person-image-container">
-                    <img src='./pics/sir.png' alt="pic-of-person" className="person-picture"/>
+                    <img src='./pics/pro.jpeg' alt="pic-of-person" className="person-picture"/>
                 </div>
                 <div className="person-info">
                     <div className="person-name">

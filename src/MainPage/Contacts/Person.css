@@ -1,8 +1,9 @@
 .person-container {
     height: 100%;
     width: 100%;
-    background-color: #1D1D1D;
     border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(237, 236, 236);
 }
 .person-inner-container {
     display: flex;
@@ -14,20 +15,19 @@
     height: 100%;
 }
 .person-image-container {
-    width: 35%;
-    height: 65%;
-    display: flex;
+    height: 100%;
+    width: 50%;
+    display: flex;  
     justify-content: center;
     align-items: center;
 }
 .person-picture {
-    border-radius: 50%;
-    height: auto;
-    width: 70%;
+    height: 100%;
+    width: 100%;
 }
 .person-info {
-    height: 65%;
-    width: 60%;
+    height: 80%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +35,7 @@
 }
 .person-name-title-container {
     height: 50%;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: white;
+    color: #1D1D1D;
 }
 .person-title {
     padding-left: 10%;
@@ -60,8 +60,7 @@
     font-weight: lighter;
     justify-content: flex-start;
     align-items: center;
-    color: white;
-
+    color: #1D1D1D;
 }
 .person-contacts {
     height: 50%;
@@ -75,8 +74,7 @@
     font-size: 1.2em;
     font-weight: lighter;
     line-break: loose;
-    color: white;
-
+    color: #1D1D1D;
 }
 @media (min-width: 1101px) {
     .person-contact {

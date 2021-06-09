@@ -1,15 +1,15 @@
 import './ImagePopup.css'
 import Modal from 'react-modal'
 import { disableBodyScroll, enableBodyScroll  } from 'body-scroll-lock'
-import React, { useState } from 'react'
+import React from 'react'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss'
+import 'swiper/swiper.min.css';
+import 'swiper/swiper-bundle.css';
+import 'swiper/components/navigation/navigation.min.css';
 SwiperCore.use([Navigation])
 
 export default function ImagePopup({popupOpen, activatePopup, arrayObject, index}) {
-
 
     //Locks scroll
     const bodyScrollLock = () => {
@@ -43,13 +43,17 @@ export default function ImagePopup({popupOpen, activatePopup, arrayObject, index
                 loop={true}
                 initialSlide={index}
                 navigation
-                className="modal-swiper">
+                className="modal-swiper"
+                preloadImages={false}
+                lazy={true}
+                >
                     {arrayObject.hqPictures.map((src, index) => {
                         return (
-                            <SwiperSlide className="modal-slide" key={index}>
-                                <img className='popup-gallery-image'
-                                src={process.env.PUBLIC_URL + './pics-highres' + src} 
+                            <SwiperSlide className="modal-slide swiper-slide" key={index}>
+                                <img className='popup-gallery-image swiper-lazy'
+                                src={process.env.PUBLIC_URL + './pics-highres' + src}
                                 alt="project-pic"></img>
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </SwiperSlide>
                         )
                     })}

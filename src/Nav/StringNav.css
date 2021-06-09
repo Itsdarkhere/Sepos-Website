@@ -64,9 +64,6 @@
     transform: rotate(180deg);
     transition: transform 500ms ease;
 }
-.navbar-button:hover {
-    color: rgb(255, 139, 6);
-}
 @media (min-width: 951px) {
     .projects-hashlink-container:focus-within .dropdown-menu,
     .projects-hashlink-container:hover .dropdown-menu {

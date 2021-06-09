@@ -7,7 +7,7 @@
     justify-content: flex-start;
     align-items: center;   
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .landing-video {
     width: 100%;
@@ -17,58 +17,71 @@
 }   
 .entry-view-inner-container {
     position: absolute;
-    top: 50px;
+    top: 50px;  
+    left: 5%;
     height: 70%;
-    width: 90%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;    
 }
 .line { 
     font-size: max(2.5vw, .6em);
     width: 100%;
+    height: 50%;
     color: white;
-    white-space: nowrap;
     font-family: 'Tahoma-bold', serif;
-    text-shadow: 2px 2px 10px #000000;
+    text-shadow: 4px 4px 10px #000000;
+    font-variant: small-caps;
 }
 .price-p {
     font-size: max(3.5vw, .8em);
     text-align: center;
 }
 .entry-view-description {
-    position: absolute;
-    width: 90%;
-    bottom: 0;
-    font-size: max(1.5vw, 0.4em);   
-    color: rgb(219, 219, 219);
+    width: 80%;
+    font-size: max(1.2vw, 0.5em);   
+    color: rgb(199, 199, 199);
     text-align: start;
     font-family: 'Rockwell', serif;
-    text-shadow: 1px 1px 2px #030303;
+    text-shadow: 4px 4px 10px #000000;
     height: max-content;
 }
-@media (min-width: 601px) and (max-width: 650px) {
-
-    .line { 
-        font-size: max(3vw, .6em);
-        
-    }
-    .entry-view-description {
-        font-size: max(1.5vw, 0.4em);   
-    }
-        
-    
-}
-@media (max-width: 600px) {
+@media (min-width: 601px) and (max-width: 800px) {
     .entry-view-inner-container {
         justify-content: center;
     }
-    .line { 
-        font-size: max(2.5vw, .5em);
-            
+    .line {
+        font-size: max(3vw, .8em);
     }
     .entry-view-description {
-        font-size: max(2.5vw, 0.4em);   
+        font-size: max(1.3vw, 0.5em);   
+    }
+}
+@media (min-width: 401px) and (max-width: 600px) {
+    .entry-view-inner-container {
+        justify-content: center;
+        width: 90%;
+    }
+    .entry-view-description {
+        font-size: max(2.5vw, 0.4em); 
+        
+    }
+    .line { 
+        font-size: max(4.5vw, 2em);
+    }
+}
+@media (max-width: 490px) {
+    .entry-view-inner-container {
+        justify-content: center;
+        width: 90%;
+    }
+    .entry-view-description {
+        font-size: max(2.5vw, 0.4em); 
+        
+    }
+    .line { 
+        font-size: min(6vw, 1.5em);
     }
 }

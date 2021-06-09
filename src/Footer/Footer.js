@@ -7,23 +7,15 @@ export default function Footer() {
     return (
         <footer className="bottom-outer-container">
             <div className="bottom-inner-container">
-                <div className="footer-nav">
-                    <HashLink smooth to="/#projects" className="footer-nav-button">
-                        Projektit
-                    </HashLink>
-                    <HashLink smooth to="/#companies" className="footer-nav-button">
-                        Osakkuusyhtiöt
-                    </HashLink>
-                    <HashLink smooth to="/#contact" className="footer-nav-button">
-                        Ota Yhteyttä
-                    </HashLink> 
+                <div className="footer-logo-container">
+                    <p>SEPOS OY</p>
                 </div>
-                <div className="policy-info">
-                    <p>Terms of Use</p>
-                    <p>Privacy Policy</p>
-                </div>
-                <div className="footer-tag ">
-                    <p>®BeFound Web Design</p>
+                <div className="footer-tags-container">
+                    <div className="footer-policies">
+                        <div className="policy">Privacy Policy</div>
+                        <div className="policy">Terms of Use</div>
+                    </div>
+                    <div className="footer-befound">@BeFound Web Design</div>
                 </div>
             </div>
         </footer>

@@ -14,9 +14,6 @@ export default function Text({ arrayObject }) {
 
     return (
         <div className="text-outer-container">
-            <div className="text-name-container">
-                <p>{arrayObject.name}</p>
-            </div>
             <div className="text-inner-container">
                 <div className="text-desc-container">
                     <p className="text-description">{arrayObject.description}</p>

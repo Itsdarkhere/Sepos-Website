@@ -26,7 +26,7 @@ export default function Companies({ companyArray }) {
     return (
         <div className="companies-outer-container" id="companies">
             <div className="companies-text">           
-                <motion.p className="companies-text-header" ref={ref} animate={controls}>Osakkuusyhtiöt</motion.p>
+                <motion.div className="companies-text-header" ref={ref} animate={controls}>Osakkuusyhtiöt</motion.div>
             </div>
             <div className="companies-container">
                 {companyArray.map((company, index) => {
