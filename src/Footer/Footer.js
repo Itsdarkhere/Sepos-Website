@@ -1,5 +1,4 @@
 import './Footer.css'
-import { HashLink } from 'react-router-hash-link'
 import React from 'react'
 
 export default function Footer() {
@@ -7,9 +6,9 @@ export default function Footer() {
     return (
         <footer className="bottom-outer-container">
             <div className="bottom-inner-container">
-                <div className="footer-logo-container">
+                <button className="footer-logo-button" onClick={() => window.scrollTo(0, 0)}>
                     <p>SEPOS OY</p>
-                </div>
+                </button>
                 <div className="footer-tags-container">
                     <div className="footer-policies">
                         <div className="policy">Privacy Policy</div>

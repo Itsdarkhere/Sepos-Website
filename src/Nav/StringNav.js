@@ -19,7 +19,7 @@ export default function StringNav() {
                 <div className="dropdown-menu">
                     {projectArray.map((project, index) => {
                         return (
-                            <Link key={index} className="dropdown-link" to={project.projectPage}>{project.name}</Link>
+                            <Link tabIndex="-1" key={index} className="dropdown-link" to={project.projectPage}>{project.name}</Link>
                         )
                     })}
                 </div>

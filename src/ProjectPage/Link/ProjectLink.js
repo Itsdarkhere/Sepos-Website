@@ -1,5 +1,6 @@
 import './ProjectLink.css'
 import { Link } from 'react-router-dom'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import React from 'react'
 
 
@@ -11,7 +12,7 @@ export default function ProjectLink({left, link}) {
             top: '5%'} : {right: '2%', top: '5%'}}>
             <p>{link[1]}</p>   
             <div className={"icon-container"} style={left ? {justifyContent: 'flex-start'} : {justifyContent: 'flex-end'}}>
-                <i className={left ? "fa fa-arrow-left slider-icon" : "fa fa-arrow-right slider-icon"}></i>
+                {left ? <MdKeyboardArrowLeft className="next-icon"/> : <MdKeyboardArrowRight className="next-icon"/>}
             </div>
         </Link>
     )

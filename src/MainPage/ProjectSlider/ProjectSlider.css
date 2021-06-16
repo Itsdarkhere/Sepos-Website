@@ -6,6 +6,7 @@
     align-items: center;
     position: relative;
     margin-top: 50px;
+    overflow: hidden;
 }
 .project-slider-container {
     min-height: 600px;
@@ -46,15 +47,26 @@
 .swiper-button-right,
 .swiper-button-left {
     position: absolute;
-    color: #1D1D1D !important;
+    top: 0;
+    bottom: 0;
+    width: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
 }
 .scale-button {
     transform: scale(2.5);
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition: color 1;
 }
 .scale-button:hover {
     transform: scale(3);
     transition: transform 500ms ease;
+    color: rgb(255, 139, 6)
 }
 .slider-header {    
     width: 100%;
@@ -105,19 +117,25 @@
     height: 100%;
     background-color: rgb(0, 0, 0);
     opacity: 0;
-    transition: opacity 500ms ease;
-}
-.slider-link:hover {
-    opacity: 0.6;
-    transition: opacity 500ms ease;
+    transition: opacity 300ms ease;
+    will-change: opacity;
 }
 .slider-text {
     width: 100%;
     height: 10%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 .spacer {
     height: 20px;
     width: 100%;
+}
+@media (hover) {
+    .slider-link:focus-within,
+    .slider-link:hover {
+        opacity: 0.3;
+        transition: opacity 500ms ease;
+    }
 }
 @media (max-width: 600px) {
     .slider-header-inner {
@@ -133,6 +151,6 @@
 @media (hover) and (max-width: 600px) {
     .swiper-button-right,
     .swiper-button-left {
-        opacity: 1;
+        opacity: 1;   
     }
 }

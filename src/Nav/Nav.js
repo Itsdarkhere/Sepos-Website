@@ -4,6 +4,8 @@ import StringNav from './StringNav.js'
 import { useResizeDetector } from 'react-resize-detector'
 import NavPopup from './NavPopup.js'
 import { useState } from 'react'
+import { MenuToggle } from './NavIcon.js'
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function Nav() {
@@ -28,12 +30,14 @@ export default function Nav() {
 
     //Chooses between burger and string menu based on width
     const getNav = () => {
-        if (width < 950) {
+        if (width <= 950) {
             return (    
-                    <button className="hamburger" onClick={() => activatePopup()}>  
-                        <i className="fas fa-bars fa-2x burger-icon"></i>
-                        <NavPopup popupOpen={popupOpen} activatePopup={activatePopup}/>
-                    </button>
+                    <motion.button className="hamburger-holder" 
+                    initial={false} animate={popupOpen ? "open" : "closed"} 
+                    onClick={() => activatePopup()}>  
+                        <MenuToggle/>
+                        <NavPopup popupOpen={popupOpen}/>
+                    </motion.button>
                 )
         } else {
             return  (  
@@ -41,10 +45,17 @@ export default function Nav() {
                 )
         }    
     }
+    //close nav if open and scroll to top, on header click
+    const HeaderAction = () => {
+        if (popupOpen) {
+            activatePopup()   
+        }
+        scrollToTop()
+    }
 
     return (
         <div className="navbar-container" id="navbar" ref={ref}>
-            <Link className="navbar-header" to="/" onClick={() => scrollToTop()}>SEPOS OY</Link>
+            <Link className="navbar-header" to="/" onClick={() => HeaderAction()}>SEPOS OY</Link>
             <div className="navbar-button-container">
                 {getNav()}
             </div>

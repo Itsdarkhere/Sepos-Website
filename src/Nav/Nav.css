@@ -13,20 +13,16 @@
 }
 .navbar-button-container {
     width: 33%;
-    padding-right: 5%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;    
+    align-items: center; 
+    margin-right: 5%; 
 }
 .navbar-header {
     height: 100%;
-    padding-left: 5%;
+    margin-left: 5%;
     font-size: max(1.2em, 1.5vw);
     background-color: rgba(0,0,0,0);
     color: rgb(255, 139, 6);
-    outline: none;
     border: none;
     font-family: 'Rockwell', serif;
     text-decoration: none;
@@ -35,16 +31,26 @@
     align-items: center;
     scroll-behavior: smooth;
 }
-.hamburger {
-    background-color:rgb(255, 139, 6, 0);
-    outline: none;
+.nav-close-icon,
+.nav-open-icon {
+    color: white;
+    transform: scale(2);
+    position: absolute;
+
+}
+.no-display {
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+.hamburger-holder {
     border: none;
-    height: 40%;
+    background-color: rgba(0,0,0,0);
+    height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
 }
 .burger-icon {
     color: white;

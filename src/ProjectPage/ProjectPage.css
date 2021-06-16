@@ -8,65 +8,8 @@
     align-items: center;
     background-color: #f2f5f8;
 }
-.loader-container {
-    position: fixed;
-    top: 75px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #1D1D1D;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.loader {
-    animation:spin 1s infinite linear;
-    border:solid 1vmin transparent;
-    border-radius:50%;
-    border-right-color:rgb(255, 139, 6);
-    border-top-color:rgb(230, 170, 59);
-    box-sizing:border-box;
-    height:10vmin;
-    left:calc(50% - 5vmin);
-    position:fixed;
-    top:calc(50% - 5vmin);
-    width:10vmin;
-    z-index:1;
-}
-loader:before {
-      animation:spin 2s infinite linear;
-      border:solid 1vmin transparent;
-      border-radius:50%;
-      border-right-color:rgb(255, 139, 6);
-      border-top-color:rgb(230, 170, 59);
-      box-sizing:border-box;
-      content:"";
-      height:8vmin;
-      left:0;
-      position:absolute;
-      top:0;
-      width:8vmin;
-}
-.loader:after {
-      animation:spin 3s infinite linear;
-      border:solid 1vmin transparent;
-      border-radius:50%;
-      border-right-color:rgb(255, 139, 6);
-      border-top-color:rgb(230, 170, 59);
-      box-sizing:border-box;
-      content:"";
-      height:6vmin;
-      left:1vmin;
-      position:absolute;
-      top:1vmin;
-      width:6vmin;
-}
-  
-@keyframes spin {
-    100% {
-      transform:rotate(360deg);
-    }
+.pp-spacer {
+    height: 100px;
 }
 .pp-status {
     height: 300px;
@@ -77,7 +20,8 @@ loader:before {
 }
 .status-p {
     font-size: max(1.5vw, 0.8em);
-    font-weight: lighter;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
     text-align: center;
 }
 .pp-top-container {
@@ -92,9 +36,9 @@ loader:before {
 .text-name-container {
     position: absolute;
     bottom: 5%;
-    left: 2%;
+    left: 2%;  
     height: 20%;    
-    width: 100%;
+    width: 96%;
     display: flex;  
     justify-content: flex-start;
     align-items: center;
@@ -110,11 +54,6 @@ loader:before {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-}
-@media (min-width: 1001px) and (max-width: 1500px) {
-    .pp-status {
-        align-items: flex-start;
-    }
 }
 @media (max-width: 1000px) {
     .pp-bottom-container {

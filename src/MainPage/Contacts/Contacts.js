@@ -26,7 +26,7 @@ export default function PersonContainer() {
         <div className="contacts-container"  id="contact">
             <div className="persons-grid">
                 <div className="contact-header-container">
-                    <motion.div animate={controls} ref={ref} className="contact-header">Yhteystiedot</motion.div>
+                    <motion.div animate={controls} ref={ref} transition={{duration: 1}} className="contact-header">Yhteystiedot</motion.div>
                 </div>
                 <Person image="Bean.jpeg" name="Jouni Alho" 
                 title="Hallimies-prospekti" phone={'+358 050 305 4104'} 

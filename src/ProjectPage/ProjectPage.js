@@ -4,6 +4,7 @@ import Link from './Link/ProjectLink.js'
 import Gallery from './Gallery/Gallery.js'
 import Text from './Text/Text.js'
 import Footer from '../Footer/Footer.js'
+import Preloader from '../Preloader/preloader'
 import ImagePopup from './ImagePopup/ImagePopup.js'
 import React, { useEffect, useState } from 'react'
 
@@ -27,19 +28,28 @@ export default function ProjectPage({ arrayObject, projectIndex }) {
         setPopupOpen(true);
         }
     }
+
     const setPictureIndex = (propIndex) => {
         setIndex(propIndex);
     }
 
+    const getStatusBlock = () => {
+        if (arrayObject.status) {
+            return (
+                <div className="pp-status">
+                    <p className="status-p">{ arrayObject.status ? 'Tilanne: ' + arrayObject.status : ''}</p>
+                </div>
+            )
+        }
+        return <div className="pp-spacer"></div>
+    }
 
     return (
         <div className="project-page-container">
-            <div className="loader-container" style={imgLoaded ? {display: 'none'} : {display: 'flex'}}>
-                <div className="loader"></div>
-            </div>
+            <Preloader loaded={imgLoaded}/>
             <ImagePopup popupOpen={popupOpen} activatePopup={activatePopup} arrayObject={arrayObject} index={index} />
             <div className="pp-top-container">  
-                <BigImage activatePopup={activatePopup} setIndex={setPictureIndex} projectIndex={projectIndex} setImgLoaded={setImgLoaded}/>
+                <BigImage projectIndex={projectIndex} setImgLoaded={setImgLoaded}/>
                 <Link left={true} link={arrayObject.previousProject}/>
                 <Link left={false} link={arrayObject.nextProject}/>
                 <div className="text-name-container">
@@ -50,9 +60,7 @@ export default function ProjectPage({ arrayObject, projectIndex }) {
                 <Text arrayObject={arrayObject}/>
                 <Gallery activatePopup={activatePopup} arrayObject={arrayObject} setIndex={setPictureIndex}/>
             </div>
-            <div className="pp-status">
-                <p className="status-p">{ arrayObject.status ? 'Tilanne: ' + arrayObject.status : ''}</p>
-            </div>
+            {getStatusBlock()}
             <Footer/>   
         </div>
     )

@@ -4,6 +4,8 @@ import ProjectSlider from './ProjectSlider/ProjectSlider.js'
 import Companies from './Companies/Companies.js'
 import Contacts from './Contacts/Contacts.js'
 import { ProjectArray, CompanyArray } from '../Arrays/Arrays'
+import Preloader from '../Preloader/preloader'
+import '../Fonts/Rockwell.css'
 import React, { useState } from 'react'
 import Footer from '../Footer/Footer.js'
 
@@ -21,9 +23,7 @@ export default function MainPage() {
 
     return (
         <div className="main-page-container">
-            <div className="main-loader-container" style={loaded ? {display: 'none'} : {display: 'flex'}}>
-                <div className="main-loader"></div>
-            </div>    
+            <Preloader loaded={loaded}/>
             <div className="entry-spacer"></div>
             <EntryView showMainpage={showMainpage}/>
             <ProjectSlider projectArray={projectArray}/>

@@ -10,9 +10,11 @@ import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 import { useAnimation, motion } from 'framer-motion'
-import {GrNext, GrPrevious} from 'react-icons/gr'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import React from 'react'
 SwiperCore.use([Pagination])
+
+
 export default function ProjectSlider({ projectArray }) {
 
     //these and the if handle on scroll animations
@@ -31,16 +33,16 @@ export default function ProjectSlider({ projectArray }) {
     return (
         <div className="project-slider-outer-container">
             <div className="project-slider-container" id="projects">
-                <motion.div animate={controls} className="slider-header">
+                <motion.div animate={controls} transition={{duration: 1}} className="slider-header">
                     <div className="slider-header-inner" ref={ref}>
                         Kiinteistökehitys
                     </div>
                 </motion.div>
                 <div className="swiper-button-left scale-button">
-                    <GrPrevious/>
+                    <MdKeyboardArrowLeft/>
                 </div>
                 <div className="swiper-button-right scale-button">
-                    <GrNext/>
+                    <MdKeyboardArrowRight/>
                 </div>
                 <Swiper
                     spaceBetween={10}
@@ -83,12 +85,12 @@ export default function ProjectSlider({ projectArray }) {
                                 <SwiperSlide className="swiper-slide" key={index}>
                                     <div className="project-wrapper">
                                         <img className='slider-image'
-                                        src={process.env.PUBLIC_URL + './pics-highres/' + index + '.png'} 
+                                        src={process.env.PUBLIC_URL + './pics-highres/project-' + index + '.png'} 
                                         alt="project-pic"></img>
                                         <Link className="slider-link" to={project.projectPage}></Link>
                                     </div>
                                     <div className="slider-text">
-                                        <p className="slider-project-name">{project.name}</p>
+                                        <p>{project.name}</p>
                                     </div>
                                     <div className="spacer"></div>
                                 </SwiperSlide>

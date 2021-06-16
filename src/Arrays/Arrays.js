@@ -1,13 +1,14 @@
-
-
 function ProjectArray() {
+
+    // Contains company and project info packages, everything that is needed
+    // Just so that it is as clear and easy to edit as possible
 
    const projects = [
         {
            name: 'Garden Helsinki',
            index: 0,
-           pictures: ['/38.png', '/40.png', '/35.png', '/39.png', '/37.png', '/33.png'],
-           hqPictures: ['/garden4.jpg', '/garden2.jpg', '/garden11.jpg', '/garden1.jpg', '/garden5.jpeg', '/garden14.jpg'],
+           pictures: ['/garden-1.png', '/garden-2.png', '/garden-3.png', '/garden-4.png', '/garden-5.png', '/garden-6.png'],
+           hqPictures: ['/garden-1.png', '/garden-2.jpg', '/garden-3.jpg', '/garden-4.jpg', '/garden-5.jpeg', '/garden-6.jpg'],
            finishedIn: '2022',
            website: 'https://www.gardenhelsinki.fi/',
            description: `Garden Helsinki on Töölöön, Nordenskiöldinkadun varrelle suunnitteilla oleva kiinteistökehityshanke. 
@@ -25,8 +26,8 @@ function ProjectArray() {
         {
             name: 'Turun Ratapiha',
             index: 1,
-            pictures: ['/turku0.png', '/turku2.png', '/3.png', '/4.png', '/5.png','/6.png'],
-            hqPictures: ['/turku3.jpg', '/turku9.jpg', '/turku5.jpg', '/turku4.jpg', '/turku2.jpg', '/turku1.jpg'],
+            pictures: ['/turku-1.png', '/turku-2.png', '/turku-3.png', '/turku-4.png', '/turku-5.png','/turku-6.png'],
+            hqPictures: ['/turku-1.jpg', '/turku-2.jpg', '/turku-3.jpg', '/turku-4.jpg', '/turku-5.jpg','/turku-6.jpg'],
             finishedIn: '2025',
             website: 'https://www.turkuratapiha.fi/',
             description: `Turun Ratapiha -hanke monipuolistaa osaltaan Turun kaupunkikeskustan tapahtuma-, 
@@ -44,8 +45,8 @@ function ProjectArray() {
         {
             name: 'Hippos Jyväskylä',
             index: 2,
-            pictures: ['/19.png', '/20.png', '/21.png'],
-            hqPictures: ['/hippos3.jpg', '/hippos2.jpg', '/hippos1.jpg'],
+            pictures: ['/hippos-1.png', '/hippos-2.png', '/hippos-3.png'],
+            hqPictures: ['/hippos-1.jpg', '/hippos-2.jpg', '/hippos-3.jpg'],
             finishedIn: '2025',
             website: 'https://www.businessjyvaskyla.fi/kehitys/hippos',
             description: `Hippos on valmistuessaan paitsi kaupunkilaisten kohtaamispaikka, myös Pohjoismaiden merkittävin 
@@ -65,8 +66,8 @@ function ProjectArray() {
         {
             name: 'Hämeensaari Hämeenlinna',
             index: 3,
-            pictures: ['/32.png', '/29.png','/30.png', '/28.png', '/31.png'],
-            hqPictures: ['/hämeensaari1.png', '/hämeensaari4.png', '/hameensaari3.png', '/hameensaari5.png', '/hämeensaari2.png'],
+            pictures: ['/hameensaari-1.png', '/hameensaari-2.png','/hameensaari-3.png', '/hameensaari-4.png', '/hameensaari-5.png'],
+            hqPictures: ['/hameensaari-1.png', '/hameensaari-2.png','/hameensaari-3.png', '/hameensaari-4.png', '/hameensaari-5.png'],
             finishedIn: '2028',
             website: 'https://www.hameenlinna.fi/asuminen-ja-ymparisto/kaavoitus/suunnitteluvaraukset/',
             description: `Hämeenlinnan keskustakehityshanke on monipuolinen ja vetovoimainen matkailun 
@@ -83,8 +84,8 @@ function ProjectArray() {
         {
             name: 'Oulun Ratapiha',
             index: 4,
-            pictures: ['/11.png', '/8.png', '/9.png', '/7.png', '/10.png','/12.png'],
-            hqPictures: ['/oulu1.jpg', '/oulu5.jpg', '/oulu4.jpg', '/oulu6.jpg', '/oulu3.jpg', '/oulu2.jpg'],
+            pictures: ['/oulu-1.png', '/oulu-2.png', '/oulu-3.png', '/oulu-4.png', '/oulu-5.png','/oulu-6.png'],
+            hqPictures: ['/oulu-1.jpg', '/oulu-2.jpg', '/oulu-3.jpg', '/oulu-4.jpg', '/oulu-5.jpg','/oulu-6.jpg'],
             finishedIn: '2021',
             website: '',
             description: `Hankkeen päämääränä on mahdollistaa merkittävältä osaltaan Oulun kaupungin strategiaa - 
@@ -120,8 +121,8 @@ function ProjectArray() {
         {
             name: 'Inkoonranta',
             index: 5,
-            pictures: ['/15.png', '/14.png', '/16.png', '/18.png', '/17.png', '/13.png'],
-            hqPictures: ['/inkoo4.jpg', '/inkoo6.jpg', '/inkoo2.jpg', '/inkoo1.png', '/inkoo3.jpg', '/inkoo7.jpg'],
+            pictures: ['/inkoo-1.png', '/inkoo-2.png', '/inkoo-3.png', '/inkoo-4.png', '/inkoo-5.png', '/inkoo-6.png'],
+            hqPictures: ['/inkoo-1.jpg', '/inkoo-2.jpg', '/inkoo-3.jpg', '/inkoo-4.png', '/inkoo-5.jpg', '/inkoo-6.jpg'],
             finishedIn: '2022',
             website: 'https://www.inkoonranta.com/inkoonranta',
             description: `Inkoonranta on elämänlaatua meren äärellä. Se on omaa rauhaa ja naapurihenkeä, sulassa 
@@ -138,8 +139,8 @@ function ProjectArray() {
         {
             name : 'Hangon Läntinen Laituri',
             index: 6,
-            pictures: ['/25.png', '/23.png', '/24.png', '/22.png','/26.png', '/27.png'],
-            hqPictures: ['/hanko3.jpg', '/hanko4.jpg', '/hanko5.jpg', '/hanko7.jpg', '/hanko2.jpg', '/hanko1.jpeg'],
+            pictures: ['/hanko-1.png', '/hanko-2.png', '/hanko-3.png', '/hanko-4.png','/hanko-5.png', '/hanko-6.png'],
+            hqPictures: ['/hanko-1.jpeg', '/hanko-2.jpg', '/hanko-3.jpg', '/hanko-4.jpg','/hanko-5.jpg', '/hanko-6.jpg'],
             finishedIn: '2025',
             website: 'https://www.inkoonranta.com/inkoonranta',
             description: `Kuningatarvuorelle, Itäsatamaan, merenrantaan ja Hangon palvelujen ääreen rakennetaan noin 
@@ -163,7 +164,7 @@ function CompanyArray() {
     const companies = [
         {
             'name': 'Modum Oy',
-            'image': '/square1.png',
+            'image': '/company-1.png',
             'website': 'https://modumdigital.com/en/',
             'displayWebsite': 'modumdigital.fi',
             'description': 'Modum offers a new kind of high-quality professional video and photography production service for product descriptions, presentation and distribution on the web.',
@@ -171,7 +172,7 @@ function CompanyArray() {
 
         {
             'name': 'CINEMATIC',
-            'image': '/square2.png',
+            'image': '/company-2.png',
             'website': 'https://www.cinematic.fi/',
             'displayWebsite': 'cinematic.fi',
             'description': 'Cinematic is a production company founded in 2018 by Antti J. Jokinen it`s sole purpose is to create movies, TV-series, digital content, music & consumer products.',
@@ -179,7 +180,7 @@ function CompanyArray() {
 
         {
             'name': 'Hög light and sound',
-            'image': '/square3.png',
+            'image': '/company-3.png',
             'website': 'https://www.facebook.com/hoglightandsound/',
             'displayWebsite': 'hoglightandsound.fi',
             'description': 'Professional solutions for touring and events.',
@@ -187,7 +188,7 @@ function CompanyArray() {
 
         {
             'name': 'Luv Kodit Oy',
-            'image': '/square4.png',
+            'image': '/company-4.png',
             'website': 'http://www.luvkoti.fi/',
             'displayWebsite': 'luvkoti.fi',
             'description': 'LUV on uusi, raikas, yrittäjävetoinen asuntomyyntiyhtiö. Erikoisosaamistamme on paneutuminen kokonaisiin, uusiin kiinteistöhankkeisiin. Ja asiakkaidemme kokonaisvaltaiseen, yksilölliseen palveluun.',

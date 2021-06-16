@@ -10,9 +10,9 @@ export default function LandingPage({ showMainpage }) {
 
     const getPicture = () => {
         if (width < 600) {
-            return ( <img src={process.env.PUBLIC_URL + './pics-highres/tall-pic-dark.png'} onLoad={() => showMainpage(true)} className="landing-video" alt="wide-project-img"></img> )
+            return ( <img src={process.env.PUBLIC_URL + './pics-highres/entry-phone.png'} onLoad={() => showMainpage(true)} className="landing-video" alt="wide-project-img"></img> )
         }
-        return ( <img src={process.env.PUBLIC_URL + './pics-highres/wide-big-side.png'} onLoad={() => showMainpage(true)} className="landing-video" alt="wide-project-img"></img> )
+        return ( <img src={process.env.PUBLIC_URL + './pics-highres/entry-desktop.png'} onLoad={() => showMainpage(true)} className="landing-video" alt="wide-project-img"></img> )
     }
 
 
@@ -21,7 +21,7 @@ export default function LandingPage({ showMainpage }) {
             {getPicture()}  
             <div className="entry-view-inner-container">
                 <div className="line"> 
-                    <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2}}>Kaupunkikehityskohteita helsingissä, turussa, jyväskylässä ja hämeenlinnassa.</motion.p>
+                    <motion.p animate={{opacity: [0, 1]}} transition={{duration: 2}}>Kaupunkikehityskohteita Helsingissä, Turussa, Jyväskylässä ja Hämeenlinnassa.</motion.p>
                 </div>
                 <div className="entry-view-description">
                     <p>Sepos Oy on vuonna 2014 perustettu Timo Everin, 

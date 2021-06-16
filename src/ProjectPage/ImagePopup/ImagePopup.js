@@ -2,43 +2,44 @@ import './ImagePopup.css'
 import Modal from 'react-modal'
 import { disableBodyScroll, enableBodyScroll  } from 'body-scroll-lock'
 import React from 'react'
-import SwiperCore, { Navigation } from 'swiper'
+import SwiperCore, { Navigation, Lazy } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.min.css';
-import 'swiper/swiper-bundle.css';
+import 'swiper/components/lazy/lazy.min.css'
 import 'swiper/components/navigation/navigation.min.css';
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Lazy])
 
 export default function ImagePopup({popupOpen, activatePopup, arrayObject, index}) {
+
+
+    const targetElement = document.querySelector('#App');
 
     //Locks scroll
     const bodyScrollLock = () => {
         if (popupOpen) {
-            disableBodyScroll(document.getElementById('modal-container'));
+            disableBodyScroll(targetElement);
         } else {
-            enableBodyScroll(document.getElementById('modal-container'));
+            enableBodyScroll(targetElement);
         }
     }
 
-
     //I have no idea why this needs to be set
     Modal.setAppElement('#root')
-
 
     return (
         <div id="modal-container">
             <Modal
             isOpen={popupOpen}
             onAfterOpen={bodyScrollLock()}
-            onRequestClose={activatePopup}
             onAfterClose={bodyScrollLock()}
             overlayClassName="modal-container"
-            className="modal" >
+            className="modal">
+                <div className="image-loader"></div>
                 <div className="close-button" onClick={() => activatePopup()}>
-                    <i class="fas fa-times fa-2x"></i>
+                    <i className="fas fa-times fa-2x"></i>
                 </div>
                 <Swiper
-                spaceBetween={100}
+                spaceBetween={50}
                 slidesPerView={1}
                 loop={true}
                 initialSlide={index}
@@ -49,11 +50,9 @@ export default function ImagePopup({popupOpen, activatePopup, arrayObject, index
                 >
                     {arrayObject.hqPictures.map((src, index) => {
                         return (
-                            <SwiperSlide className="modal-slide swiper-slide" key={index}>
+                            <SwiperSlide className="modal-slide swiper-slide swiper-lazy" key={index}>
                                 <img className='popup-gallery-image swiper-lazy'
-                                src={process.env.PUBLIC_URL + './pics-highres' + src}
-                                alt="project-pic"></img>
-                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                data-src={process.env.PUBLIC_URL + './pics-highres' + src}></img>
                             </SwiperSlide>
                         )
                     })}

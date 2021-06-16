@@ -10,10 +10,7 @@ export default function Companies({ companyArray }) {
 
     const [triggered, setTriggered] = useState(true);
     const controls = useAnimation();
-    const { ref, inView } = useInView({
-        threshold: 0,
-    })
-
+    const { ref, inView } = useInView()
 
     if (inView && triggered) {
         setTriggered(false)
@@ -25,9 +22,9 @@ export default function Companies({ companyArray }) {
 
     return (
         <div className="companies-outer-container" id="companies">
-            <div className="companies-text">           
-                <motion.div className="companies-text-header" ref={ref} animate={controls}>Osakkuusyhtiöt</motion.div>
-            </div>
+            <motion.div className="companies-text" animate={controls} transition={{duration: 1}} ref={ref}>           
+                <div className="companies-text-header">Osakkuusyhtiöt</div>
+            </motion.div>
             <div className="companies-container">
                 {companyArray.map((company, index) => {
                     return (

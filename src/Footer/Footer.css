@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.footer-logo-container {
+.footer-logo-button {
     height: 100%;
     width: 20%; 
     font-size: max(1.2em, 1.5vw);
@@ -24,6 +24,7 @@
     color: rgb(255, 139, 6);
     font-family: 'Rockwell', serif;
     text-decoration: none;
+    border: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -35,6 +36,8 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 .footer-policies {
     height: 100%;
@@ -43,7 +46,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-weight: lighter;
     color: rgb(226, 225, 225);
 }
 .footer-befound {
@@ -52,7 +54,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-weight: lighter;
     color: rgb(226, 225, 225);
 }
 @media (min-width: 400px) and (max-width: 775px) {
@@ -75,6 +76,7 @@
     }
     .footer-policies {
         flex-direction: column;
+        width: 100%;
         height: 70%;
     }
     .footer-tags-container {

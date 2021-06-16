@@ -2,7 +2,7 @@ import './BigImage.css'
 import { useResizeDetector } from 'react-resize-detector'
 import React from 'react'
 
-export default function BigImage({activatePopup, setIndex, projectIndex, setImgLoaded}) {
+export default function BigImage({projectIndex, setImgLoaded}) {
 
     const { width, ref } = useResizeDetector()
 
@@ -13,14 +13,14 @@ export default function BigImage({activatePopup, setIndex, projectIndex, setImgL
         }
         return ( 
             <img className="big-image" onLoad={() => setImgLoaded(true)}
-            src={process.env.PUBLIC_URL + './pics-highres/wide-dark-' + projectIndex + ".png"} 
-            onMouseEnter={() => setIndex(0)} key={projectIndex} ></img> 
+            src={process.env.PUBLIC_URL + './pics-highres/wide-dark-' + projectIndex + '.png'} 
+            key={projectIndex} alt="wide-project"></img> 
         )
     }
 
 
     return (
-        <div className="big-image-container" onClick={() => activatePopup()} ref={ref}>
+        <div className="big-image-container" ref={ref}>
             {getPicture()}
         </div>
     )

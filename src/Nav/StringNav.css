@@ -29,10 +29,13 @@
     align-items: center;
 }
 .dropdown-link {
+    left: 0;
     width: 90%;
+    padding-left: 10%;
     font-size: 0.9em;
     text-decoration: none;
-    color: white;
+    color: white;   
+    font-family: 'Rockwell', sans-serif;
 }
 .dropdown-link:hover {
     color: rgb(255, 139, 6);
@@ -41,31 +44,33 @@
     height: 80%;   
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: 'Rockwell', serif;
     white-space: nowrap;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 33%;
+    font-family: 'Rockwell', sans-serif;
+    -webkit-transition: color .3s;
+    -moz-transition:    color .3s;
+    -ms-transition:     color .3s;
+    -o-transition:      color .3s;
+    transition: color .3;
 }    
+.navbar-button:hover {
+    color: rgb(255, 139, 6);
+}
 .navbar-button-projects {
     height: 80%;   
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: 'Rockwell', serif;
+    font-family: 'Rockwell', sans-serif;
     white-space: nowrap;
-    display: flex;
+    display: flex;  
     justify-content: flex-end;
     align-items: center;
-    position: relative;
+    position: relative; 
 }
-.projects-hashlink-container:focus-within .nav-icon,
-.projects-hashlink-container:hover .nav-icon {
-    transform: rotate(180deg);
-    transition: transform 500ms ease;
-}
-@media (min-width: 951px) {
-    .projects-hashlink-container:focus-within .dropdown-menu,
+@media (min-width: 950px) {
     .projects-hashlink-container:hover .dropdown-menu {
         transform: translateY(0);
         transition: transform 1000ms ease;
