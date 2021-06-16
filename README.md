@@ -1,14 +1,13 @@
-## Hello friend!
+# Hello friend!
 
-# This is my very first full website project.
+## This is my very first full website project.
 Created with React and Love.
 
 The almost finished version is available for viewing at: https://sepos-515ff.web.app/
 
+Still quite proud since I dont regard myself as a frontend developer and in my own opinion have been able to create a nice site for my client.
 
-# Still quite proud since I dont regard myself as a frontend developer and in my own opinion have been able to create a nice site for my client.
-
-# The Project still needs a few small fixes, such as:
+## The Project still needs a few small fixes, such as:
 
 Work on element dimensions.
 
