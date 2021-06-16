@@ -1,6 +1,6 @@
 ## Hello friend!
 
-# This is my very first full website project for a wonderfull company called Sepos Oy.
+# This is my very first full website project.
 Created with React and Love.
 
 The almost finished version is available for viewing at: https://sepos-515ff.web.app/
