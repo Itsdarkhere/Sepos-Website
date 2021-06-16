@@ -27,7 +27,7 @@
     height: 50%;
     width: 100%;
     font-size: max(3vw, 2.5em);
-    font-family: 'Rockwell';
+    font-family: 'Rockwell', serif;
     color: #1D1D1D;
     display: flex;  
     justify-content: flex-start;
