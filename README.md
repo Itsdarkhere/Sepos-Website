@@ -13,4 +13,4 @@ Work on dimensions a little
 
 I might add some very small animations, or tweak existing ones
 
-Contacts still needs the real photos, might change the layout a little once i get them
+Contacts still needs the real photos, might change the layout a little once I get them
