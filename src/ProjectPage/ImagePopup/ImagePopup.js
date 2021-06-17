@@ -11,8 +11,8 @@ SwiperCore.use([Navigation, Lazy])
 
 export default function ImagePopup({popupOpen, activatePopup, arrayObject, index}) {
 
-
-    const targetElement = document.querySelector('#App');
+    // For some reason nothing else was working.... I dont know, but it works so.
+    const targetElement = document.getRootNode()
 
     //Locks scroll
     const bodyScrollLock = () => {
@@ -33,11 +33,12 @@ export default function ImagePopup({popupOpen, activatePopup, arrayObject, index
             onAfterOpen={bodyScrollLock()}
             onAfterClose={bodyScrollLock()}
             overlayClassName="modal-container"
+            id="image-modal"
             className="modal">
                 <div className="image-loader"></div>
-                <div className="close-button" onClick={() => activatePopup()}>
+                <button className="close-button" onClick={() => activatePopup()} aria-label="Close Image Popup">
                     <i className="fas fa-times fa-2x"></i>
-                </div>
+                </button>
                 <Swiper
                 spaceBetween={50}
                 slidesPerView={1}

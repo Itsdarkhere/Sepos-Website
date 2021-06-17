@@ -27,6 +27,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    z-index: 1001;
 }
 .dropdown-link {
     left: 0;

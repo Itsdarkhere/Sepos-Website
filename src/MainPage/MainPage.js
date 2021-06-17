@@ -13,7 +13,7 @@ export default function MainPage() {
 
     const [loaded, setLoaded] = useState(false)
 
-    const showMainpage = (bool) => {
+    const showMainPage = (bool) => {
         setLoaded(bool)
     }
 
@@ -25,7 +25,7 @@ export default function MainPage() {
         <div className="main-page-container">
             <Preloader loaded={loaded}/>
             <div className="entry-spacer"></div>
-            <EntryView showMainpage={showMainpage}/>
+            <EntryView showMainPage={showMainPage}/>
             <ProjectSlider projectArray={projectArray}/>
             <Companies companyArray={companyArray}/>
             <Contacts/>

@@ -9,6 +9,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   scroll-behavior: smooth;
+  max-width: 2000px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

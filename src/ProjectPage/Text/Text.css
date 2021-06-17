@@ -137,6 +137,9 @@
         font-size: min(2.5em, 3.0vw);
         line-height: 200%;
     }
+    .text-desc-container {
+        width: 100%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -144,7 +147,7 @@
         font-size: 0.9em;
     }
     .text-fact {
-        font-size: min(1.5em, 3.2vw);
+        font-size: min(.8em, 4.5vw);
         white-space: normal;
         line-height: 200%;
     }

@@ -5,7 +5,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 21;
+    z-index: 210;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +73,8 @@
     right: 5%;
     color: white;
     z-index: 22;
+    border: none;
+    background-color: rgba(0,0,0,0);
 }
 .close-button:hover {
     color: rgb(255, 139, 6) !important;

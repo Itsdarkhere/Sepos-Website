@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer.js'
 import Preloader from '../Preloader/preloader'
 import ImagePopup from './ImagePopup/ImagePopup.js'
 import React, { useEffect, useState } from 'react'
-
+    
 export default function ProjectPage({ arrayObject, projectIndex }) {
 
     const [popupOpen, setPopupOpen] = useState(false);

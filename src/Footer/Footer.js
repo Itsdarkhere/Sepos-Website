@@ -11,7 +11,8 @@ export default function Footer() {
     return (
         <footer className="bottom-outer-container">
             <div className="bottom-inner-container">
-                <button className="footer-logo-button" onClick={() => window.scrollTo(0, 0)}>
+                <button className="footer-logo-button" onClick={() => window.scrollTo(0, 0)}
+                aria-label="Home Button">
                     <p>SEPOS OY</p>
                 </button>
                 {policy ? 

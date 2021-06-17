@@ -224,7 +224,7 @@
         height: auto;
     }    
     .company-text-inner {
-        font-size: max(0.8em, 0.8vw);
+        font-size: max(0.7em, 0.8vw);
     }
     .company-link {
         font-size: max(1em, 1vw);

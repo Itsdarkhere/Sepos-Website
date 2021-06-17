@@ -32,7 +32,7 @@ export default function Nav() {
     const getNav = () => {
         if (width <= 950) {
             return (    
-                    <motion.button className="hamburger-holder" 
+                    <motion.button className="hamburger-holder" aria-label="Open Navigation"
                     initial={false} animate={popupOpen ? "open" : "closed"} 
                     onClick={() => activatePopup()}>  
                         <MenuToggle/>

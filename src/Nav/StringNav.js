@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import { ProjectArray } from '../Arrays/Arrays' 
 import React from 'react'
 
-
+// Loaded is used to kill pointer events while preloader is rolling
 export default function StringNav() {
 
-
+    // From here we can access page and project names
     const projectArray = ProjectArray()
 
     return (
