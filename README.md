@@ -9,16 +9,8 @@ Still quite proud since I dont regard myself as a frontend developer and in my o
 
 ## The Project still needs a few small fixes, such as:
 
-Work on element dimensions.
+Work on dimensions a little
 
-Body-scroll-lock is giving out a warning regarding ios devices, small patch has been made but I still need to check that it is properly working.
+I might add some very small animations, or tweak existing ones
 
-Need to optimise Image sizes with preloads and srcsets.
-
-I need to check that the font sizes are still working in all sizes, since I just added a new font today.
-
-Contact sections phone numbers are not great looking with the current font so I need to change that.
-
-Garden projects 'big image' has a color variation that I need to work on.
-
-Contacts section is still waiting for the real photos so I'm when I get them Ill work on adjusting the layout so that it does not screw up the images, like it currently does at some sizes.
+Contacts still needs the real photos, might change the layout a little once I get them
