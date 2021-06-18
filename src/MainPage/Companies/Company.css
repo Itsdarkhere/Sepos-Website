@@ -22,9 +22,9 @@
     z-index: 2; 
     background: linear-gradient(
         hsl(0 0% 0% / 0),
-        hsl(255 0% 10% / 0.5) 10%,
+        hsl(255 0% 10% / 0.4) 10%,
         hsl(0 0% 0% / 1)
-    );
+    );  
 }
 .company-name-container {
     width: max-content;
@@ -32,7 +32,7 @@
     font-size: 1.5em;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    height: 15%;
+    height: 20%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -51,7 +51,8 @@
 }
 .company-text-inner {
     width: 90%;
-    height: 50%;
+    height: auto;
+    min-height: 50%;
     display: flex;
     text-align: start;
     justify-content: flex-start;
@@ -60,7 +61,7 @@
 .company-desc {
     padding-left: 10px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
 .company-button-container {
     width: 90%;
@@ -76,7 +77,6 @@
     max-height: 40px;
     width: auto;
     font-size: 1.2em;
-    font-family: 'Tahoma-bold';
     border: none;
     text-decoration: none;
     display: flex;
@@ -101,9 +101,14 @@
     border-bottom: 2px solid white;
 }
 @media (hover) {
+    /* justify-content so that on touch devices it looks a little better, imo */
     .company-text {
+        justify-content: center;
         transform: translateY(65%);
         transition: transform 500ms ease;
+    }
+    .commpany.company-name-container {
+        height: 15%;
     }
     .company-container:hover .company-text {
         transform: translateY(0);   
@@ -148,6 +153,9 @@
     }
 }
 @media (max-width: 600px) {
+    .company-name-container {
+        height: 10%;
+    }
     .company-container {
         width: 100%;
         box-shadow:  10px 10px 20px #bebebe,
@@ -156,21 +164,21 @@
     }
     .company-text {
         height: 95%;
-        justify-content: center;
         bottom: 0;
     }
     .company-text-inner {
         font-size: max(0.6em, 3vw);
-        height: 30%;
+        min-height: 40%;
+        height: auto;
     }
     .company-button-container {
         height: 10%;
     }
     .company-link {
-        font-size: max(0.7em, 3.2vw);
+        font-size: min(1.8em, 5.5vw);
     }
     .company-name-container {
-        font-size: max(1em, 4vw);
+        font-size: min(2em, 6vw);
     }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -197,7 +205,7 @@
         font-size: max(0.6em, 1.2vw);
     }
     .company-link {
-        font-size: max(.8em, 2vw);
+        font-size: max(.8em, 1.8vw);
     }
     .company-name-container {
         font-size: max(1em, 2.2vw);
@@ -212,7 +220,7 @@
         font-size: max(0.6em, 1.2vw);
     }
     .company-link {
-        font-size: max(.8em, 1.4vw);
+        font-size: max(.8em, 1.6vw);
     }
     .company-name-container {
         font-size: max(1em, 2vw);
