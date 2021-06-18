@@ -20,7 +20,7 @@ function ProjectArray() {
            status: 'Suunnitteluvaiheessa, rakentaminen tavoitteena käynnistää 2022 ja kohde valmis 2025',
            projectPage: '/garden',
             previousProject: ["/lantinen-laituri", "Hangon Läntinen Laituri"],
-           nextProject: ["/ratapiha", "Turun Ratapiha"]
+           nextProject: ["/turku", "Turun Ratapiha"]
         },
 
         {
@@ -37,7 +37,7 @@ function ProjectArray() {
             websiteLinkName: 'www.turkuratapiha.fi',
             facts: ['Areena, 10 000 paikkaa', '800 asuntoa', 'Toimistotiloja, hotelli, liikuntatiloja', 'Elämyskeskus Genesis', 'Arjen peruspalvelut kuten ruokakauppa ja lääkäriasema'],
             status: 'Suunnitteluvaiheessa, rakentaminen tavoitteena käynnistää 2023 ja kohde valmis 2026',
-            projectPage: '/ratapiha',
+            projectPage: '/turku',
             previousProject: ["/garden", "Garden Arena"],
             nextProject: ["/hippos", "Hippos Jyväskylä"]
         },
@@ -53,13 +53,13 @@ function ProjectArray() {
             liikunnan, urheilun ja huippu-urheilun, terveyden edistämisen sekä hyvinvoinnin ja tapahtumien keskus. Lisäksi se yhdistää liikunnan 
             tutkimuksen ja teknologisen tuotekehityksen kansainvälisesti merkittäväksi kokonaisuudeksi.`,
             websiteLinkName: 'www.businessjyvaskyla.fi/hippos',
-            facts: ['Liikuntakeskus: mm. 2 000 hengen katsomolla varustettu sisäpeliareena, monitoimiurheilukentät, tilat yleisurheilulle, telinevoimistelu-, kamppailu-, ryhmäliikuntatilat, liikuntapäiväkoti',
-            'Osaamiskeskus: tutkimus-, opetus-, toimisto-, liike-, ravintola-, kahvila- ja kokoustilat sekä osa liikuntatiloista',
-            'Jääareena toteutetaan jäähallin peruskorjauksena ja laajennuksena, jolloin saadaan lähes 6 000 hengen urheilu- ja konserttikatsomo sekä 3 harjoitusjääkenttää',
-            'Arjen peruspalvelut kuten ruokakauppa ja lääkäriasema'],
+            facts: ['Liikuntakeskus: mm. 2 000 hengen katsomolla varustettu sisäpeliareena, monitoimiurheilukentät, tilat yleisurheilulle, telinevoimistelu-, kamppailu-, ryhmäliikuntatilat, liikuntapäiväkoti.',
+            'Osaamiskeskus: tutkimus-, opetus-, toimisto-, liike-, ravintola-, kahvila- ja kokoustilat sekä osa liikuntatiloista.',
+            'Jääareena toteutetaan jäähallin peruskorjauksena ja laajennuksena, jolloin saadaan lähes 6 000 hengen urheilu- ja konserttikatsomo sekä 3 harjoitusjääkenttää.',
+            'Arjen peruspalvelut kuten ruokakauppa ja lääkäriasema.'],
             status: 'Suunnitteluvaiheessa, rakentaminen tavoitteena käynnistää 2022 ja kohde valmis 2024',
             projectPage: '/hippos',
-            previousProject: ["/ratapiha", "Oulun Ratapiha"],
+            previousProject: ["/turku", "Turun Ratapiha"],
             nextProject: ["/hameensaari", "Hämeensaari Hämeenlinna"]
         },
 
@@ -85,7 +85,7 @@ function ProjectArray() {
             name: 'Oulun Ratapiha',
             index: 4,
             pictures: ['/oulu-1.png', '/oulu-2.png', '/oulu-3.png', '/oulu-4.png', '/oulu-5.png','/oulu-6.png'],
-            hqPictures: ['/oulu-1.png', '/oulu-2.png', '/oulu-3.jpg', '/oulu-4.jpg', '/oulu-5.png','/oulu-6.png'],
+            hqPictures: ['/oulu-1.png', '/oulu-2.png', '/oulu-3.png', '/oulu-4.jpg', '/oulu-5.png','/oulu-6.png'],
             finishedIn: '2021',
             website: '',
             description: `Hankkeen päämääränä on mahdollistaa merkittävältä osaltaan Oulun kaupungin strategiaa - 
@@ -99,24 +99,6 @@ function ProjectArray() {
             previousProject: ["/hameensaari", "Hämeensaari Hämeenlinna"],
             nextProject: ["/inkoonranta", "Inkoonranta"]
         },
-
-        /*{
-            Waiting for public release
-
-            name: 'Hernesaaren Kärki',
-            index: 0,
-            pictures: ['/41.png', '/42.png','/43.png', '/44.png', '/45.png', '/46.png',],
-            hqPictures: ['/hernesaari4.jpg', '/hernesaari2.jpg', '/hernesaari3.jpg', '/hernesaari1.jpg', '/hernesaari6.jpg', '/hernesaari5.jpg'],
-            finishedIn: '2026',
-            website: '',
-            description: '',
-            websiteLinkName: '',
-            facts: [],
-            status: '',
-            projectPage: '/hernesaaren-karki',
-            previousProject: ["/oulu", "Oulun Ratapiha"],
-            nextProject: ["/inkoonranta", "Inkoonranta"]
-        }, */
 
         {
             name: 'Inkoonranta',

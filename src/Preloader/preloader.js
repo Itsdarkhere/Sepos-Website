@@ -10,7 +10,7 @@ export default function Preloader({loaded}) {
     // the preloader goes away
 
     // For some reason nothing else was working.... I dont know, but it works so.
-    const targetElement = document.getRootNode()
+    const targetElement = document.querySelector('body')
 
     // Locks/opens scroll, having one function to do both did not work for somereason on this
     // component
@@ -32,7 +32,7 @@ export default function Preloader({loaded}) {
                 onAfterClose={enableScroll()}
                 overlayClassName="loader-container"
                 id="preloader-modal"
-                className="preloader-modal">
+                className="preloader-modal" >
                     <div className="loader"></div>
             </Modal>
         </div>

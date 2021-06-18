@@ -1,9 +1,9 @@
 .loader-container {
     position: fixed;
     top: 75px;
-    left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
     background-color: #1D1D1D;
     z-index: 100;
     display: flex;
