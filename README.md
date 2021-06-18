@@ -9,8 +9,8 @@ Still quite proud since I dont regard myself as a frontend developer and in my o
 
 ## The Project still needs a few small fixes, such as:
 
-Work on dimensions a little
-
-I might add some very small animations, or tweak existing ones
+I might add some very small animations, or tweak existing ones, timing for one is a bit of rn with the preloader blocking.
 
 Contacts still needs the real photos, might change the layout a little once I get them
+
+Body-scroll-lock does not work on ios, need to change library or get a better understanding of the existing one.
