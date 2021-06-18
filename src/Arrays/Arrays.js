@@ -8,7 +8,7 @@ function ProjectArray() {
            name: 'Garden Helsinki',
            index: 0,
            pictures: ['/garden-1.png', '/garden-2.png', '/garden-3.png', '/garden-4.png', '/garden-5.png', '/garden-6.png'],
-           hqPictures: ['/garden-1.png', '/garden-2.jpg', '/garden-3.jpg', '/garden-4.jpg', '/garden-5.jpeg', '/garden-6.jpg'],
+           hqPictures: ['/garden-1.jpg', '/garden-2.jpg', '/garden-3.jpg', '/garden-4.jpg', '/garden-5.jpg', '/garden-6.jpg'],
            finishedIn: '2022',
            website: 'https://www.gardenhelsinki.fi/',
            description: `Garden Helsinki on Töölöön, Nordenskiöldinkadun varrelle suunnitteilla oleva kiinteistökehityshanke. 
@@ -27,7 +27,7 @@ function ProjectArray() {
             name: 'Turun Ratapiha',
             index: 1,
             pictures: ['/turku-1.png', '/turku-2.png', '/turku-3.png', '/turku-4.png', '/turku-5.png','/turku-6.png'],
-            hqPictures: ['/turku-1.jpg', '/turku-2.jpg', '/turku-3.jpg', '/turku-4.jpg', '/turku-5.jpg','/turku-6.jpg'],
+            hqPictures: ['/turku-1.png', '/turku-2.jpg', '/turku-3.jpg', '/turku-4.png', '/turku-5.jpg','/turku-6.png'],
             finishedIn: '2025',
             website: 'https://www.turkuratapiha.fi/',
             description: `Turun Ratapiha -hanke monipuolistaa osaltaan Turun kaupunkikeskustan tapahtuma-, 
@@ -45,8 +45,8 @@ function ProjectArray() {
         {
             name: 'Hippos Jyväskylä',
             index: 2,
-            pictures: ['/hippos-1.png', '/hippos-2.png', '/hippos-3.png'],
-            hqPictures: ['/hippos-1.jpg', '/hippos-2.jpg', '/hippos-3.jpg'],
+            pictures: ['/hippos-1.png', '/hippos-2.png', '/hippos-3.png', '/hippos-4.png', '/hippos-5.png', '/hippos-6.png'],
+            hqPictures: ['/hippos-1.jpg', '/hippos-2.jpg', '/hippos-3.jpg', '/hippos-4.jpg', '/hippos-5.jpg', '/hippos-6.jpg'],
             finishedIn: '2025',
             website: 'https://www.businessjyvaskyla.fi/kehitys/hippos',
             description: `Hippos on valmistuessaan paitsi kaupunkilaisten kohtaamispaikka, myös Pohjoismaiden merkittävin 
@@ -67,7 +67,7 @@ function ProjectArray() {
             name: 'Hämeensaari Hämeenlinna',
             index: 3,
             pictures: ['/hameensaari-1.png', '/hameensaari-2.png','/hameensaari-3.png', '/hameensaari-4.png', '/hameensaari-5.png'],
-            hqPictures: ['/hameensaari-1.png', '/hameensaari-2.png','/hameensaari-3.png', '/hameensaari-4.png', '/hameensaari-5.png'],
+            hqPictures: ['/hameensaari-1.jpg', '/hameensaari-2.png','/hameensaari-3.png', '/hameensaari-4.jpg', '/hameensaari-5.jpg'],
             finishedIn: '2028',
             website: 'https://www.hameenlinna.fi/asuminen-ja-ymparisto/kaavoitus/suunnitteluvaraukset/',
             description: `Hämeenlinnan keskustakehityshanke on monipuolinen ja vetovoimainen matkailun 
@@ -85,7 +85,7 @@ function ProjectArray() {
             name: 'Oulun Ratapiha',
             index: 4,
             pictures: ['/oulu-1.png', '/oulu-2.png', '/oulu-3.png', '/oulu-4.png', '/oulu-5.png','/oulu-6.png'],
-            hqPictures: ['/oulu-1.jpg', '/oulu-2.jpg', '/oulu-3.jpg', '/oulu-4.jpg', '/oulu-5.jpg','/oulu-6.jpg'],
+            hqPictures: ['/oulu-1.png', '/oulu-2.png', '/oulu-3.jpg', '/oulu-4.jpg', '/oulu-5.png','/oulu-6.png'],
             finishedIn: '2021',
             website: '',
             description: `Hankkeen päämääränä on mahdollistaa merkittävältä osaltaan Oulun kaupungin strategiaa - 
@@ -122,7 +122,7 @@ function ProjectArray() {
             name: 'Inkoonranta',
             index: 5,
             pictures: ['/inkoo-1.png', '/inkoo-2.png', '/inkoo-3.png', '/inkoo-4.png', '/inkoo-5.png', '/inkoo-6.png'],
-            hqPictures: ['/inkoo-1.jpg', '/inkoo-2.jpg', '/inkoo-3.jpg', '/inkoo-4.png', '/inkoo-5.jpg', '/inkoo-6.jpg'],
+            hqPictures: ['/inkoo-1.png', '/inkoo-2.png', '/inkoo-3.png', '/inkoo-4.png', '/inkoo-5.png', '/inkoo-6.png'],
             finishedIn: '2022',
             website: 'https://www.inkoonranta.com/inkoonranta',
             description: `Inkoonranta on elämänlaatua meren äärellä. Se on omaa rauhaa ja naapurihenkeä, sulassa 
@@ -140,7 +140,7 @@ function ProjectArray() {
             name : 'Hangon Läntinen Laituri',
             index: 6,
             pictures: ['/hanko-1.png', '/hanko-2.png', '/hanko-3.png', '/hanko-4.png','/hanko-5.png', '/hanko-6.png'],
-            hqPictures: ['/hanko-1.jpeg', '/hanko-2.jpg', '/hanko-3.jpg', '/hanko-4.jpg','/hanko-5.jpg', '/hanko-6.jpg'],
+            hqPictures: ['/hanko-1.jpg', '/hanko-2.jpg', '/hanko-3.jpg', '/hanko-4.jpg','/hanko-5.jpeg', '/hanko-6.jpg'],
             finishedIn: '2025',
             website: 'https://www.inkoonranta.com/inkoonranta',
             description: `Kuningatarvuorelle, Itäsatamaan, merenrantaan ja Hangon palvelujen ääreen rakennetaan noin 
